@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OnlineAddressBookWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "OnlineAddressBookWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
