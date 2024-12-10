@@ -27,6 +27,11 @@ namespace OnlineAddressBookWinUI.User
         {
             this.InitializeComponent();
         }
+        public void goBack(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = ((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(LoginPage), rootFrame);
+        }
         public void Signup(object sender, RoutedEventArgs e)
         {
             email = emailInput.Text;

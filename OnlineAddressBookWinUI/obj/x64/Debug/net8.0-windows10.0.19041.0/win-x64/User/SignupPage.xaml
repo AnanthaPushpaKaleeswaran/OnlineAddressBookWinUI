@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="OnlineAddressBookWinUI.User.SignupPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Button x:Name="backBtn" Content="Back" Margin="20,30" Background="#1c5be6" Foreground="White" Width="100" Grid.Row="0" Click="goBack"/>
+        <Button x:ConnectionId='2' x:Name="backBtn" Content="Back" Margin="20,30" Background="#1c5be6" Foreground="White" Width="100" Grid.Row="0"               />
 
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1">
             <TextBlock Text="Welcome to Online Address Book" Margin="0,80" FontSize="30" Foreground="#763838" />
@@ -35,20 +35,21 @@
 
                     <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
                         <TextBlock Text="Email" FontSize="15" Margin="5"/>
-                        <TextBox x:Name="emailInput" Width="300" Margin="5"/>
+                        <TextBox x:ConnectionId='6' x:Name="emailInput" Width="300" Margin="5"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
                         <TextBlock Text="Password" FontSize="15" Margin="5"/>
-                        <PasswordBox x:Name="passwordInput" Width="300" Margin="5"/>
+                        <PasswordBox x:ConnectionId='5' x:Name="passwordInput" Width="300" Margin="5"/>
                     </StackPanel>
 
-                    <Button HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="3" Margin="0,15" Background="#1B9331" Foreground="White" Width="100" Click="Signup"/>
+                    <Button x:ConnectionId='3' HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="3" Margin="0,15" Background="#1B9331" Foreground="White" Width="100"               />
                     <Border HorizontalAlignment="Center" Grid.Row="4">
-                        <TextBlock x:Name="alert" Foreground="#db0202" TextWrapping="wrap"></TextBlock>
+                        <TextBlock x:ConnectionId='4' x:Name="alert" Foreground="#db0202" TextWrapping="wrap"></TextBlock>
                     </Border>
                 </Grid>
             </Border>
         </StackPanel>
     </Grid>
 </Page>
+

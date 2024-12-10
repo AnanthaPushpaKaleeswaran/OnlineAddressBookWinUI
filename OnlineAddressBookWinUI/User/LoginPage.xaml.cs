@@ -30,7 +30,7 @@ namespace OnlineAddressBookWinUI.User
         public void GoToSignup(object sender, RoutedEventArgs e)
         {
             Frame rootFrame=((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(SignupPage));
+            Frame.Navigate(typeof(SignupPage),rootFrame);
         }
     }
 }
