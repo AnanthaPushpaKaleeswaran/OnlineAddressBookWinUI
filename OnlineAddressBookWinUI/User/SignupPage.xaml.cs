@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data.SQLite;
 using System.Text.RegularExpressions;
+using System.IO;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -22,7 +23,6 @@ namespace OnlineAddressBookWinUI.User
         protected string password = "";
         protected int n;
         protected int publicKey;
-        private int privateKey;
         public SignupPage()
         {
             this.InitializeComponent();
@@ -47,7 +47,8 @@ namespace OnlineAddressBookWinUI.User
                 alert.Text = "Please enter the password between 8 and below 50 characters.\nThe password must contain a upper case letter, a lower case letter, a number and a symbol";
                 return;
             }
-            String ConnectionString = @"Data Source = E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\onlineAddressBook.db";
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
+            string ConnectionString = $"Data Source={dbPath}";
             SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
             MyConnection.Open();
             if (MyConnection.State.Equals("close"))
@@ -60,10 +61,9 @@ namespace OnlineAddressBookWinUI.User
                 createTable(MyConnection, "user");
             }
             encryptPassword();
-            string query = "SELECT COUNT(1) FROM user WHERE email=@email AND password=@password";
+            string query = "SELECT COUNT(1) FROM user WHERE email=@email";
             SQLiteCommand command = new SQLiteCommand(query, MyConnection);
             command.Parameters.AddWithValue("@email", email);
-            command.Parameters.AddWithValue("@password", password);
             int userCount = Convert.ToInt32(command.ExecuteScalar());
             if (userCount > 0)
             {
@@ -75,7 +75,7 @@ namespace OnlineAddressBookWinUI.User
             {
                 return;
             }
-
+            alert.Text = "User added successfully";
             MyConnection.Close();
         }
 
@@ -116,7 +116,13 @@ namespace OnlineAddressBookWinUI.User
             {
                 encoded.Add(Encrypt((int)letter));
             }
-            password = String.Join("", encoded);
+            string encPass = "";
+            foreach (int letter in encoded)
+            {
+                encPass += letter.ToString();
+                encPass += getRandomAlphabet();
+            }
+            password = encPass;
         }
         public void SetKeys()
         {
@@ -148,7 +154,6 @@ namespace OnlineAddressBookWinUI.User
                 d += 1;
             }
 
-            privateKey = d;
         }
         public int Encrypt(int message)
         {
@@ -187,6 +192,13 @@ namespace OnlineAddressBookWinUI.User
                 return false;
             }
         }
-
+        protected char getRandomAlphabet()
+        {
+            Random random = new Random();
+            // random lowercase letter
+            int a = random.Next(0, 26);
+            char ch = (char)('a' + a);
+            return ch;
+        }
     }
 }
