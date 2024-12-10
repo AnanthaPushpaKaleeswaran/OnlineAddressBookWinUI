@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="OnlineAddressBookWinUI.User.SignupPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineAddressBookWinUI.User"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
+        <TextBlock Text="Welcome to Online Address Book" Margin="0,80" FontSize="30" Foreground="#763838" />
+        <Border BorderBrush="Gray" Height="400" Width="400" Background="#E7E5E5" CornerRadius="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="0">
+                    <TextBlock Text="Signup" Margin="20" FontSize="30"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
+                    <TextBlock Text="Email" FontSize="15" Margin="5"/>
+                    <TextBox x:Name="emailInput" Width="300" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
+                    <TextBlock Text="Password" FontSize="15" Margin="5"/>
+                    <PasswordBox x:Name="passwordInput" Width="300" Margin="5"/>
+                </StackPanel>
+
+                <Button HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="3" Margin="0,15" Background="#1B9331" Foreground="White" Width="100" Click="Signup"/>
+                <Border HorizontalAlignment="Center" Grid.Row="4">
+                    <TextBlock x:Name="alert" Foreground="#db0202" TextWrapping="wrap"></TextBlock>
+                </Border>
+            </Grid>
+        </Border>
+    </StackPanel>
+</Page>

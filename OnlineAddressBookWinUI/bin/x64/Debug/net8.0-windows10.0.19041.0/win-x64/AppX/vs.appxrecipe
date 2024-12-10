@@ -29,25 +29,25 @@
     <AppXManifest Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-09T05:54:16.341</Modified>
+      <Modified>2024-12-10T09:39:13.526</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-09T05:54:15.959</Modified>
+      <Modified>2024-12-10T09:26:28.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.runtimeconfig.json">
       <PackagePath>OnlineAddressBookWinUI.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-09T05:54:15.524</Modified>
+      <Modified>2024-12-10T09:26:27.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.dll">
       <PackagePath>OnlineAddressBookWinUI.dll</PackagePath>
-      <Modified>2024-12-09T05:54:14.819</Modified>
+      <Modified>2024-12-10T09:39:13.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>OnlineAddressBookWinUI.exe</PackagePath>
-      <Modified>2024-12-09T05:54:14.843</Modified>
+      <Modified>2024-12-10T09:39:13.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -789,6 +789,18 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-10-14T22:26:14.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll">
+      <PackagePath>EntityFramework.SqlServer.dll</PackagePath>
+      <Modified>2020-04-16T20:39:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.dll">
+      <PackagePath>EntityFramework.dll</PackagePath>
+      <Modified>2020-04-16T20:38:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.win32.systemevents\4.7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll">
+      <PackagePath>Microsoft.Win32.SystemEvents.dll</PackagePath>
+      <Modified>2019-11-15T08:54:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.windowsappsdk\1.6.241114003\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
       <Modified>2024-11-01T16:58:58.000</Modified>
@@ -853,6 +865,42 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2024-11-06T06:16:48.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.119\lib\netstandard2.1\System.Data.SQLite.dll">
+      <PackagePath>System.Data.SQLite.dll</PackagePath>
+      <Modified>2024-09-28T19:23:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.codedom\4.7.0\lib\netstandard2.0\System.CodeDom.dll">
+      <PackagePath>System.CodeDom.dll</PackagePath>
+      <Modified>2019-11-15T08:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.configuration.configurationmanager\4.7.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+      <Modified>2019-11-15T08:37:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.data.sqlclient\4.8.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll">
+      <PackagePath>System.Data.SqlClient.dll</PackagePath>
+      <Modified>2020-01-17T18:41:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.data.sqlite.ef6\1.0.119\lib\netstandard2.1\System.Data.SQLite.EF6.dll">
+      <PackagePath>System.Data.SQLite.EF6.dll</PackagePath>
+      <Modified>2024-09-28T19:21:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.drawing.common\4.7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll">
+      <PackagePath>System.Drawing.Common.dll</PackagePath>
+      <Modified>2019-11-15T08:54:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.cryptography.protecteddata\4.7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+      <Modified>2019-11-15T08:53:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.permissions\4.7.0\lib\netcoreapp3.0\System.Security.Permissions.dll">
+      <PackagePath>System.Security.Permissions.dll</PackagePath>
+      <Modified>2019-11-15T08:56:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.windows.extensions\4.7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll">
+      <PackagePath>System.Windows.Extensions.dll</PackagePath>
+      <Modified>2019-11-15T08:54:30.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>WebView2Loader.dll</PackagePath>
       <Modified>2024-07-20T08:33:54.000</Modified>
@@ -860,6 +908,14 @@
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.windowsappsdk\1.6.241114003\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2024-11-05T17:28:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\runtime.win-x64.runtime.native.system.data.sqlclient.sni\4.4.0\runtimes\win-x64\native\sni.dll">
+      <PackagePath>sni.dll</PackagePath>
+      <Modified>2017-07-12T11:24:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.119\runtimes\win-x64\native\SQLite.Interop.dll">
+      <PackagePath>SQLite.Interop.dll</PackagePath>
+      <Modified>2024-09-28T19:18:20.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
       <PackagePath>Microsoft.Web.WebView2.Core.dll</PackagePath>
@@ -871,7 +927,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.deps.json">
       <PackagePath>OnlineAddressBookWinUI.deps.json</PackagePath>
-      <Modified>2024-12-09T05:54:15.347</Modified>
+      <Modified>2024-12-10T09:26:27.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using OnlineAddressBookWinUI.User;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -21,6 +22,7 @@ namespace OnlineAddressBookWinUI
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
+    
     public sealed partial class MainWindow : Window
     {
         public MainWindow()
@@ -28,9 +30,6 @@ namespace OnlineAddressBookWinUI
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
-        }
+
     }
 }

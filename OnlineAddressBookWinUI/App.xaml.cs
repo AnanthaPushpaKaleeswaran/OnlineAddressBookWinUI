@@ -30,6 +30,8 @@ namespace OnlineAddressBookWinUI
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+
+        public Frame RootFrame{get;private set;}
         public App()
         {
             this.InitializeComponent();
@@ -42,6 +44,9 @@ namespace OnlineAddressBookWinUI
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             m_window = new MainWindow();
+            RootFrame =new Frame();
+            RootFrame.Navigate(typeof(User.LoginPage));
+            m_window.Content = RootFrame;
             m_window.Activate();
         }
 
