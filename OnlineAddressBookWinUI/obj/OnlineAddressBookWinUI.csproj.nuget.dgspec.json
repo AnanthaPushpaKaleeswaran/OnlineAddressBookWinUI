@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[1.6.241114003, )"
             },
+            "Syncfusion.Editors.WinUI": {
+              "target": "Package",
+              "version": "[27.2.5, )"
+            },
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.119, )"

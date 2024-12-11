@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1742",
           "Microsoft.WindowsAppSDK": "1.6.241114003",
+          "Syncfusion.Editors.WinUI": "27.2.5",
           "System.Data.SQLite": "1.0.119",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.2651.64",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.11",
@@ -904,6 +905,40 @@
           }
         }
       },
+      "Syncfusion.Core.WinUI/27.2.5": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1742",
+          "Microsoft.WindowsAppSDK": "1.6.241114003",
+          "Syncfusion.Licensing": "27.2.5"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "assemblyVersion": "27.2.5.0",
+            "fileVersion": "27.2.5.0"
+          }
+        }
+      },
+      "Syncfusion.Editors.WinUI/27.2.5": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1742",
+          "Microsoft.WindowsAppSDK": "1.6.241114003",
+          "Syncfusion.Core.WinUI": "27.2.5"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "assemblyVersion": "27.2.5.0",
+            "fileVersion": "27.2.5.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.5": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "27.2.5.0",
+            "fileVersion": "27.2.5.0"
+          }
+        }
+      },
       "System.CodeDom/4.7.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -1126,6 +1161,27 @@
       "sha512": "sha512-dI7ngiCNgdm+n00nQvFTa+LbHvE9MIQXwMSLRzJI/KAJ7G1WmCachsvfE1CD6xvb3OXJvYYEfv3+S/LHyhN0Rg==",
       "path": "stub.system.data.sqlite.core.netstandard/1.0.119",
       "hashPath": "stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512"
+    },
+    "Syncfusion.Core.WinUI/27.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bFv964F/6+FF8vqyKzoSD08ari26rPw+4Nzhk8P9rtvTGHmfnLhEWUltQFqqLOpdGiKqXJE+HvllBnxLdnxLHw==",
+      "path": "syncfusion.core.winui/27.2.5",
+      "hashPath": "syncfusion.core.winui.27.2.5.nupkg.sha512"
+    },
+    "Syncfusion.Editors.WinUI/27.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wNM4VK39mGpqL/3YFkUbzX+PLQM5DK9HX55GA2kCHJsq29WDPA6k/NwP66rvWEXrDkvkgDCQXwuAOmbMl4ia8w==",
+      "path": "syncfusion.editors.winui/27.2.5",
+      "hashPath": "syncfusion.editors.winui.27.2.5.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/27.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-esz3QIcCfxz6PSNmsX7WQh+rdVOgalZCYOdM1naYUqxZWKhf4En7Ytd2w8e9HSfLgQ2HcAnuk4d0X3CBlRlevQ==",
+      "path": "syncfusion.licensing/27.2.5",
+      "hashPath": "syncfusion.licensing.27.2.5.nupkg.sha512"
     },
     "System.CodeDom/4.7.0": {
       "type": "package",

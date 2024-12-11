@@ -313,6 +313,51 @@
           }
         }
       },
+      "Syncfusion.Core.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Licensing": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Editors.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Core.WinUI": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.CodeDom/4.7.0": {
         "type": "package",
         "compile": {
@@ -780,6 +825,51 @@
           }
         }
       },
+      "Syncfusion.Core.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Licensing": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Editors.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Core.WinUI": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.CodeDom/4.7.0": {
         "type": "package",
         "compile": {
@@ -1204,6 +1294,51 @@
           "runtimes/win-x64/native/SQLite.Interop.dll": {}
         }
       },
+      "Syncfusion.Core.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Licensing": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Editors.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Core.WinUI": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.CodeDom/4.7.0": {
         "type": "package",
         "compile": {
@@ -1626,6 +1761,51 @@
         },
         "native": {
           "runtimes/win-x86/native/SQLite.Interop.dll": {}
+        }
+      },
+      "Syncfusion.Core.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Licensing": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Editors.WinUI/27.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.3233",
+          "Microsoft.WindowsAppSDK": "1.5.240802000",
+          "Syncfusion.Core.WinUI": "27.2.5"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
         }
       },
       "System.CodeDom/4.7.0": {
@@ -2856,6 +3036,294 @@
         "stub.system.data.sqlite.core.netstandard.nuspec"
       ]
     },
+    "Syncfusion.Core.WinUI/27.2.5": {
+      "sha512": "bFv964F/6+FF8vqyKzoSD08ari26rPw+4Nzhk8P9rtvTGHmfnLhEWUltQFqqLOpdGiKqXJE+HvllBnxLdnxLHw==",
+      "type": "package",
+      "path": "syncfusion.core.winui/27.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.pri",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.xml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.dll",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.pri",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI.xml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI.dll",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI.pri",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI.xml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xbf",
+        "syncfusion.core.winui.27.2.5.nupkg.sha512",
+        "syncfusion.core.winui.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Editors.WinUI/27.2.5": {
+      "sha512": "wNM4VK39mGpqL/3YFkUbzX+PLQM5DK9HX55GA2kCHJsq29WDPA6k/NwP66rvWEXrDkvkgDCQXwuAOmbMl4ia8w==",
+      "type": "package",
+      "path": "syncfusion.editors.winui/27.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI.dll",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI.pri",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI.xml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.dll",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.pri",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI.xml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xbf",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xaml",
+        "lib/net8.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI.dll",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI.pri",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI.xml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/autocomplete.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpalette.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpicker.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/colorpickerresources.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/combobox.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datepicker.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimepickerresources.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/datetimespinnerbase.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdownbase.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpalette.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/dropdowncolorpicker.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/flattextbox.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/generic.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopseditor.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/gradientstopthumb.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/lineargradienteditor.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/listview.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/maskedtextbox.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/numberbox.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/radialgradienteditor.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/rating.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/segmentedcontrol.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorchanneleditor.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/solidcolorspectrumeditor.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/spinnerview.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/textboxext.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/themeresources.xbf",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xaml",
+        "lib/net9.0-windows10.0/Syncfusion.Editors.WinUI/Themes/timepicker.xbf",
+        "syncfusion.editors.winui.27.2.5.nupkg.sha512",
+        "syncfusion.editors.winui.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Licensing/27.2.5": {
+      "sha512": "esz3QIcCfxz6PSNmsX7WQh+rdVOgalZCYOdM1naYUqxZWKhf4En7Ytd2w8e9HSfLgQ2HcAnuk4d0X3CBlRlevQ==",
+      "type": "package",
+      "path": "syncfusion.licensing/27.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net462/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/net8.0/Syncfusion.Licensing.dll",
+        "lib/net9.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.27.2.5.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
     "System.CodeDom/4.7.0": {
       "sha512": "Hs9pw/kmvH3lXaZ1LFKj3pLQsiGfj2xo3sxSzwiLlRL6UcMZUTeCfoJ9Udalvn3yq5dLlPEZzYegrTQ1/LhPOQ==",
       "type": "package",
@@ -3373,6 +3841,7 @@
     "net8.0-windows10.0.19041": [
       "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.1742",
       "Microsoft.WindowsAppSDK >= 1.6.241114003",
+      "Syncfusion.Editors.WinUI >= 27.2.5",
       "System.Data.SQLite >= 1.0.119"
     ]
   },
@@ -3433,6 +3902,10 @@
           "Microsoft.WindowsAppSDK": {
             "target": "Package",
             "version": "[1.6.241114003, )"
+          },
+          "Syncfusion.Editors.WinUI": {
+            "target": "Package",
+            "version": "[27.2.5, )"
           },
           "System.Data.SQLite": {
             "target": "Package",

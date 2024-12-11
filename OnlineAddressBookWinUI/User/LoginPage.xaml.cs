@@ -26,7 +26,6 @@ namespace OnlineAddressBookWinUI.User
     /// </summary>
     public sealed partial class LoginPage : Page
     {
-        protected string email = "";
         protected string password = "";
         protected int n;
         protected int privateKey;
@@ -34,13 +33,16 @@ namespace OnlineAddressBookWinUI.User
         public LoginPage()
         {
             this.InitializeComponent();
+            emailInput.Text = "ananth@gmail.com";
+            passwordInput.Password = "Ananth@123";
         }
 
         public void Login(object sender,RoutedEventArgs e)
         {
             Dictionary<string, string> user = new Dictionary<string, string>();
-            email = emailInput.Text;
-            password = passwordInput.Password;
+            Session.email= emailInput.Text;
+            password=passwordInput.Password;
+ 
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
             if (!dbExist(dbPath))
             {
@@ -60,9 +62,9 @@ namespace OnlineAddressBookWinUI.User
                 return;
             }
             getAllUsers(MyConnection,user);
-            if (user.ContainsKey(email))
+            if (user.ContainsKey(Session.email))
             {
-                string dicPassword = user[email];
+                string dicPassword = user[Session.email];
                 if (dicPassword != password)
                 {
                     alert.Text = "Please check your password";
@@ -76,6 +78,8 @@ namespace OnlineAddressBookWinUI.User
             }
             MyConnection.Close();
             alert.Text = "Email and password match";
+            Frame rootFrame=((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(Contact.Display),rootFrame);
         }
         public void GoToSignup(object sender, RoutedEventArgs e)
         {

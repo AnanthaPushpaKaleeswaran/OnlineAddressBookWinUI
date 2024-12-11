@@ -1,4 +1,6 @@
 App.xbf
+Contact\AddContact.xbf
+Contact\Display.xbf
 MainWindow.xbf
 User\LoginPage.xbf
 User\SignupPage.xbf
