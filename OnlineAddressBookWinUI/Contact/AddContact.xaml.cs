@@ -43,6 +43,7 @@ namespace OnlineAddressBookWinUI.Contact
                     if (selectedGroup.ID == 0)
                     {
                         AddNewGroup();
+
                     }
                 }
             }
@@ -94,7 +95,6 @@ namespace OnlineAddressBookWinUI.Contact
                     };
                     id++;
                     GroupModel.Groups.Add(newGroup);
-                    groupList.SelectedItem = newGroup;
                 }
                 else
                 {
