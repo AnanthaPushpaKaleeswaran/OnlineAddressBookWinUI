@@ -27,6 +27,7 @@ namespace OnlineAddressBookWinUI.User
     public sealed partial class LoginPage : Page
     {
         protected string password = "";
+        public string email = "";
         protected int n;
         protected int privateKey;
         protected int publicKey;
@@ -40,7 +41,7 @@ namespace OnlineAddressBookWinUI.User
         public void Login(object sender,RoutedEventArgs e)
         {
             Dictionary<string, string> user = new Dictionary<string, string>();
-            Session.email= emailInput.Text;
+            email= emailInput.Text;
             password=passwordInput.Password;
  
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
@@ -62,9 +63,9 @@ namespace OnlineAddressBookWinUI.User
                 return;
             }
             getAllUsers(MyConnection,user);
-            if (user.ContainsKey(Session.email))
+            if (user.ContainsKey(email))
             {
-                string dicPassword = user[Session.email];
+                string dicPassword = user[email];
                 if (dicPassword != password)
                 {
                     alert.Text = "Please check your password";
@@ -79,12 +80,12 @@ namespace OnlineAddressBookWinUI.User
             MyConnection.Close();
             alert.Text = "Email and password match";
             Frame rootFrame=((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(Contact.Display),rootFrame);
+            Frame.Navigate(typeof(Contact.Display),email);
         }
         public void GoToSignup(object sender, RoutedEventArgs e)
         {
             Frame rootFrame=((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(SignupPage),rootFrame);
+            Frame.Navigate(typeof(SignupPage));
         }
         protected bool dbExist(string dbName)
         {

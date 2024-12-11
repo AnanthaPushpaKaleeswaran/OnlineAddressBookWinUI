@@ -29,25 +29,25 @@
     <AppXManifest Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-11T10:28:43.863</Modified>
+      <Modified>2024-12-11T14:08:57.459</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-11T10:28:43.452</Modified>
+      <Modified>2024-12-11T11:10:11.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.runtimeconfig.json">
       <PackagePath>OnlineAddressBookWinUI.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-11T09:05:58.781</Modified>
+      <Modified>2024-12-11T10:40:50.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.dll">
       <PackagePath>OnlineAddressBookWinUI.dll</PackagePath>
-      <Modified>2024-12-11T10:28:42.272</Modified>
+      <Modified>2024-12-11T14:08:56.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>OnlineAddressBookWinUI.exe</PackagePath>
-      <Modified>2024-12-11T10:28:42.345</Modified>
+      <Modified>2024-12-11T14:08:56.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -939,7 +939,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.deps.json">
       <PackagePath>OnlineAddressBookWinUI.deps.json</PackagePath>
-      <Modified>2024-12-11T10:28:43.125</Modified>
+      <Modified>2024-12-11T10:40:50.399</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\syncfusion.core.winui\27.2.5\lib\net8.0-windows10.0\Syncfusion.Core.WinUI.pri">
       <PackagePath>Syncfusion.Core.WinUI.pri</PackagePath>

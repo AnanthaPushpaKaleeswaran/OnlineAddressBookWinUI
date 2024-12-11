@@ -20,6 +20,7 @@ namespace OnlineAddressBookWinUI.User
     public partial class SignupPage : Page
     {
         protected int n;
+        public string email = "";
         protected string password = "";
         protected int publicKey;
 
@@ -36,7 +37,7 @@ namespace OnlineAddressBookWinUI.User
 
         public void Signup(object sender, RoutedEventArgs e)
         {
-            Session.email = emailInput.Text;
+            email = emailInput.Text;
             password = passwordInput.Password;
         
             if(!ValidEmail())
@@ -71,7 +72,7 @@ namespace OnlineAddressBookWinUI.User
             encryptPassword();
             string query = "SELECT COUNT(1) FROM user WHERE email=@email";
             SQLiteCommand command = new SQLiteCommand(query, MyConnection);
-            command.Parameters.AddWithValue("@email",Session.email);
+            command.Parameters.AddWithValue("@email",email);
             int userCount = Convert.ToInt32(command.ExecuteScalar());
             
             if (userCount > 0)
@@ -87,7 +88,7 @@ namespace OnlineAddressBookWinUI.User
             
             alert.Text = "User added successfully";
             Frame rootFrame = ((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(Contact.Display), rootFrame);
+            Frame.Navigate(typeof(Contact.Display), email);
             MyConnection.Close();
         }
 
@@ -95,7 +96,7 @@ namespace OnlineAddressBookWinUI.User
         {
             string regexstr = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,50}$";
             Regex re = new Regex(regexstr);
-            return re.IsMatch(Session.email);
+            return re.IsMatch(email);
         }
 
         private bool ValidPass()
@@ -199,7 +200,7 @@ namespace OnlineAddressBookWinUI.User
             {
                 string query = "INSERT INTO user VALUES (@Email, @Password)";
                 SQLiteCommand command = new SQLiteCommand(query, connection);
-                command.Parameters.AddWithValue("@Email",Session.email);
+                command.Parameters.AddWithValue("@Email",email);
                 command.Parameters.AddWithValue("@Password", password);
                 int rowsAffected = command.ExecuteNonQuery();
                 return rowsAffected > 0;

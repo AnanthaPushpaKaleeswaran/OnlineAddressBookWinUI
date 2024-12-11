@@ -1,6 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Navigation;
 using OnlineAddressBookWinUI.User;
 using System;
 using System.Collections.ObjectModel;
@@ -19,6 +20,7 @@ namespace OnlineAddressBookWinUI.Contact
         public string phoneNo = "";
         public string address = "";
         private int id = 1;
+        public string email = "";
 
         public GroupModel GroupModel { get; set; }
 
@@ -32,6 +34,15 @@ namespace OnlineAddressBookWinUI.Contact
             this.DataContext = GroupModel;
             setExistingGroups();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e.Parameter is string message)
+            {
+                // Use the string
+                email = message;
+            }
+        }
 
         //groupSelection from xaml
         private void groupSelection(object sender,SelectionChangedEventArgs e)
@@ -43,7 +54,8 @@ namespace OnlineAddressBookWinUI.Contact
                     if (selectedGroup.ID == 0)
                     {
                         AddNewGroup();
-
+                        groupList.SelectedItems.Remove(selectedGroup);
+                        break;
                     }
                 }
             }
@@ -69,8 +81,7 @@ namespace OnlineAddressBookWinUI.Contact
 
             TextBlock alertDialog = new TextBlock
             {
-                Text = "",
-                Visibility = Visibility.Collapsed // Initially hidden
+                Text = "ji"
             };
 
             // Use a StackPanel to hold both elements
@@ -95,11 +106,12 @@ namespace OnlineAddressBookWinUI.Contact
                     };
                     id++;
                     GroupModel.Groups.Add(newGroup);
+                    groupList.SelectedItems.Add(newGroup);
                 }
                 else
                 {
                     alertDialog.Text = "The group already exists";
-                    return;
+                    
                 }
             }
         }
@@ -131,6 +143,7 @@ namespace OnlineAddressBookWinUI.Contact
                 alert.Text = "The phone number must be 10 numbers";
                 return;
             }
+
         }
 
         //check table exists

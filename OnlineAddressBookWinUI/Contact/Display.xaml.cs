@@ -23,14 +23,24 @@ namespace OnlineAddressBookWinUI.Contact
     /// </summary>
     public sealed partial class Display : Page
     {
+        public string email = "a";
         public Display()
         {
             this.InitializeComponent();
         }
-        public void AddNewContact(object sender,RoutedEventArgs e)
+        public void AddNewContact(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = ((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(AddContact), rootFrame);
+            Frame.Navigate(typeof(AddContact), email);
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e.Parameter is string message)
+            {
+                // Use the string
+                email = message; 
+            }
         }
     }
 }
