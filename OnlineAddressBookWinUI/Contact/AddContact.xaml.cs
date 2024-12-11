@@ -5,9 +5,12 @@ using Microsoft.UI.Xaml.Navigation;
 using OnlineAddressBookWinUI.User;
 using System;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace OnlineAddressBookWinUI.Contact
@@ -32,7 +35,6 @@ namespace OnlineAddressBookWinUI.Contact
             // Initialize the ViewModel and bind to DataContext
             GroupModel = new GroupModel();
             this.DataContext = GroupModel;
-            setExistingGroups();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -42,6 +44,7 @@ namespace OnlineAddressBookWinUI.Contact
                 // Use the string
                 email = message;
             }
+            setExistingGroups();
         }
 
         //groupSelection from xaml
@@ -81,7 +84,7 @@ namespace OnlineAddressBookWinUI.Contact
 
             TextBlock alertDialog = new TextBlock
             {
-                Text = "ji"
+                Text = ""
             };
 
             // Use a StackPanel to hold both elements
@@ -92,28 +95,42 @@ namespace OnlineAddressBookWinUI.Contact
             // Assign the StackPanel to the ContentDialog's Content
             addNewGroupDialog.Content = dialogContent;
             addNewGroupDialog.XamlRoot = this.XamlRoot;
-            ContentDialogResult result = await addNewGroupDialog.ShowAsync();
-            
-            if (result == ContentDialogResult.Primary)
+
+            addNewGroupDialog.PrimaryButtonClick += (sender, args) =>
             {
-                bool check=checkGroup(groupNameInput.Text);
-                if (check && !string.IsNullOrEmpty(groupNameInput.Text))
+                // Validate input
+                if (string.IsNullOrWhiteSpace(groupNameInput.Text))
                 {
+                    alertDialog.Text = "Group name cannot be empty.";
+                    alertDialog.Visibility = Visibility.Visible;
+                    args.Cancel = true; // Prevent dialog from closing
+                }
+                else if (!checkGroup(groupNameInput.Text))
+                {
+                    alertDialog.Text = "The group already exists.";
+                    alertDialog.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                }
+                else
+                {
+                    // Input is valid, hide the error message
+                    alertDialog.Visibility = Visibility.Collapsed;
+                    string groupInput = groupNameInput.Text;
+                    string modiGroupName = char.ToUpper(groupInput[0]) + groupInput.Substring(1);
+                    // Add the new group
                     Group newGroup = new Group
                     {
-                        Name = groupNameInput.Text,
+                        Name = modiGroupName,
                         ID = id
                     };
                     id++;
                     GroupModel.Groups.Add(newGroup);
                     groupList.SelectedItems.Add(newGroup);
                 }
-                else
-                {
-                    alertDialog.Text = "The group already exists";
-                    
-                }
-            }
+            };
+
+            // Show the dialog
+            await addNewGroupDialog.ShowAsync();
         }
 
         //submit
@@ -133,9 +150,9 @@ namespace OnlineAddressBookWinUI.Contact
                 return;
             }
 
-            if (!tableExist(MyConnection, "contact"))
+            if (!TableExist(MyConnection, "contact"))
             {
-                createTable(MyConnection, "contact");
+                createContactTable(MyConnection);
             }
 
             if (!ValidPhone())
@@ -144,10 +161,51 @@ namespace OnlineAddressBookWinUI.Contact
                 return;
             }
 
+            if (ContactExist(MyConnection))
+            {
+                alert.Text = "Contact already exists";
+                return;
+            }
+
+            if(NameExist(MyConnection))
+            {
+                alert.Text = "Name already exists";
+                return;
+            }
+
+            if (!ValidName())
+            {
+                alert.Text = "Please enter the valid name";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                alert.Text = "Please enter the address";
+                return;
+            }
+
+            string groupStr = makeGroupString();
+            string query = "INSERT INTO contact VALUES (@name,@phoneNo,@address,@contactGroup,@email)";
+            using (SQLiteCommand command = new SQLiteCommand(query,MyConnection))
+            {
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@phoneNo", phoneNo);
+                command.Parameters.AddWithValue("@address", address);
+                command.Parameters.AddWithValue("@contactGroup", groupStr);
+                command.Parameters.AddWithValue("@email", email);
+                int rowsAffected = command.ExecuteNonQuery();
+            }
+
+            alert.Text = "Contact added successfully";
+            Frame rootFrame = ((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(Display), email);
+            MyConnection.Close();
+            
         }
 
         //check table exists
-        protected bool tableExist(SQLiteConnection connection, string tableName)
+        protected bool TableExist(SQLiteConnection connection, string tableName)
         {
             string query = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@tableName";
             SQLiteCommand command = new SQLiteCommand(query, connection);
@@ -160,67 +218,80 @@ namespace OnlineAddressBookWinUI.Contact
         private void setExistingGroups()
         {
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
-            string ConnectionString = $"Data Source={dbPath}";
-            SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
-            MyConnection.Open();
+            string connectionString = $"Data Source={dbPath}";
 
-            if (MyConnection.State.Equals("close"))
+            using (SQLiteConnection myConnection = new SQLiteConnection(connectionString))
             {
-                Console.Error.WriteLine("Error in opening db");
-                return;
-            }
+                myConnection.Open();
 
-            if (!tableExist(MyConnection, "contact"))
-            {
-                createTable(MyConnection, "contact");
-            }
-
-            GroupModel.Groups.Clear();
-            GroupModel.Groups.Add(new Group { Name = "New Group", ID = 0 });
-            string query = "SELECT contactGroup FROM contact WHERE email=@email";
-            
-            using(SQLiteCommand command = new SQLiteCommand(query, MyConnection))
-            {
-                command.Parameters.AddWithValue("@email", Session.email);
-            
-                using(SQLiteDataReader reader = command.ExecuteReader())
+                if (myConnection.State == ConnectionState.Closed)
                 {
-                    if (reader.HasRows)
+                    Console.Error.WriteLine("Error in opening db");
+                    return;
+                }
+
+                if (!TableExist(myConnection, "contact"))
+                {
+                    createContactTable(myConnection);
+                }
+
+                GroupModel.Groups.Clear();
+                GroupModel.Groups.Add(new Group { Name = "New Group", ID = 0 });
+
+                string query = "SELECT contactGroup FROM contact WHERE email=@email";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, myConnection))
+                {
+                    command.Parameters.AddWithValue("@email", email);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        while(reader.Read())
+                        if (reader.HasRows)
                         {
-                            string groupDB = reader["contactGroup"].ToString();
-                
-                            if (!string.IsNullOrEmpty(groupDB))
+                            while (reader.Read())
                             {
-                                string groupName="";
-                            
-                                foreach(char ch in groupDB)
+                                string groupDB = reader["contactGroup"].ToString();
+
+                                if (!string.IsNullOrEmpty(groupDB))
                                 {
-                                    if (ch == ',')
+                                    string groupName = string.Empty;
+                                    StringBuilder groupBuilder = new StringBuilder();
+
+                                    foreach (char ch in groupDB)
                                     {
-                                        bool checkLoop=checkGroup(groupName);
-                                        if (checkLoop)
+                                        if (ch == ',')
                                         {
-                                            Group newGroup = new Group { Name = groupName, ID = id };
-                                            id++;
-                                            GroupModel.Groups.Add(newGroup);
+                                            string groupToAdd = groupBuilder.ToString();
+                                            if (!string.IsNullOrEmpty(groupToAdd) && checkGroup(groupToAdd))
+                                            {
+                                                string modiGroupName = char.ToUpper(groupToAdd[0]) + groupToAdd.Substring(1);
+                                                Group newGroup = new Group { Name = modiGroupName, ID = id };
+                                                id++;
+                                                GroupModel.Groups.Add(newGroup);
+                                                alert.Text = newGroup.Name;
+                                            }
+                                            groupBuilder.Clear(); // Reset the group builder
                                         }
-                                        groupName = "";
+                                        else
+                                        {
+                                            groupBuilder.Append(ch); // Add character to the group name
+                                        }
                                     }
-                                    else
+
+                                    // Check for the last group after the loop
+                                    string lastGroup = groupBuilder.ToString();
+                                    if (!string.IsNullOrEmpty(lastGroup) && checkGroup(lastGroup))
                                     {
-                                        groupName += ch;
+                                        Group newGroup = new Group { Name = lastGroup, ID = id };
+                                        id++;
+                                        GroupModel.Groups.Add(newGroup);
                                     }
-                                }
-                                bool check = checkGroup(groupName);
-                                if (check)
-                                {
-                                    Group newGroup = new Group { Name = groupName, ID = id };
-                                    id++;
-                                    GroupModel.Groups.Add(newGroup);
                                 }
                             }
+                        }
+                        else
+                        {
+                            alert.Text = email + "ji";
                         }
                     }
                 }
@@ -231,7 +302,7 @@ namespace OnlineAddressBookWinUI.Contact
         {
             foreach(Group indGroup in GroupModel.Groups)
             {
-                if(indGroup.Name == groupName)
+                if(string.Equals(indGroup.Name, groupName, StringComparison.OrdinalIgnoreCase))
                 {
                     return false;
                 }
@@ -240,9 +311,9 @@ namespace OnlineAddressBookWinUI.Contact
         }
 
         //table creation
-        protected void createTable(SQLiteConnection connection, string tableName)
+        protected void createContactTable(SQLiteConnection connection)
         {
-            string query = $@"CREATE TABLE IF NOT EXISTS [{tableName}] (name VARCHAR(40),phoneNo VARCHAR(10),address VARCHAR(100),contactGroup VARCHAR(100),email VARCHAR(50),PRIMARY KEY(phoneNo,email),FOREIGN KEY(email) REFERENCES user(email) ON DELETE CASCADE)";
+            string query = $@"CREATE TABLE IF NOT EXISTS contact (name VARCHAR(40),phoneNo VARCHAR(10),address VARCHAR(100),contactGroup VARCHAR(100),email VARCHAR(50),PRIMARY KEY(phoneNo,email),FOREIGN KEY(email) REFERENCES user(email) ON DELETE CASCADE)";
             SQLiteCommand command = new SQLiteCommand(query, connection);
             command.ExecuteNonQuery();
             Console.WriteLine("Table created successfully");
@@ -254,6 +325,66 @@ namespace OnlineAddressBookWinUI.Contact
             Regex re = new Regex(regexstr);
             return re.IsMatch(phoneNo);
         }
+
+        private bool ContactExist(SQLiteConnection connection)
+        {
+            string query = "SELECT COUNT(*) FROM contact WHERE phoneNo=@phoneNo AND email=@email";
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@phoneNo", phoneNo);
+                var result = command.ExecuteScalar();
+                return Convert.ToInt32(result) > 0;
+            };
+        }
+
+        private bool NameExist(SQLiteConnection connection)
+        {
+            string query = "SELECT COUNT(*) FROM contact WHERE name=@name AND email=@email";
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@name", name);
+                var result = command.ExecuteScalar();
+                return Convert.ToInt32(result) > 0;
+            };
+        }
+
+        private bool ValidName()
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return false;
+            }
+            string regexstr = @"^[a-zA-Z0-9]+$";
+            Regex re = new Regex(regexstr);
+            return re.IsMatch(name);
+        }
+
+        private string makeGroupString()
+        {
+            string res = "";
+            int groupCount = GroupModel.Groups.Count;
+            int index = 0;
+
+            foreach (Group indGroup in GroupModel.Groups)
+            {
+                if (indGroup.Name != "New Group")
+                {
+                    res += indGroup.Name;
+                    index++;
+
+                    // Only add a comma if it's not the last group
+                    if (index < groupCount-1)
+                    {
+                        res += ",";
+                    }
+                }
+            }
+
+            return res;
+        }
+
     }
 
     //group model class

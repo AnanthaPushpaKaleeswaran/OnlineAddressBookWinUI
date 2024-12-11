@@ -66,7 +66,7 @@ namespace OnlineAddressBookWinUI.User
             
             if (!tableExist(MyConnection, "user"))
             {
-                createTable(MyConnection, "user");
+                createUserTable(MyConnection);
             }
             
             encryptPassword();
@@ -115,9 +115,9 @@ namespace OnlineAddressBookWinUI.User
             return Convert.ToInt32(result) > 0;
         }
         
-        protected void createTable(SQLiteConnection connection, string tableName)
+        protected void createUserTable(SQLiteConnection connection)
         {
-            string query = $@"CREATE TABLE IF NOT EXISTS [{tableName}] (email VARCHAR(50), password VARCHAR(30))";
+            string query = $@"CREATE TABLE IF NOT EXISTS user (email VARCHAR(50), password VARCHAR(30))";
             SQLiteCommand command = new SQLiteCommand(query, connection);
             command.ExecuteNonQuery();
             Console.WriteLine("Table created successfully");

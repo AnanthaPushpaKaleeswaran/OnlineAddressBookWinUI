@@ -58,7 +58,7 @@
                     <Button x:ConnectionId='2' HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="4" Margin="0,15" Background="#1B9331" Foreground="White" Width="100"                />
 
                     <!-- Alert Message -->
-                    <TextBlock x:ConnectionId='3' x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5" TextWrapping="Wrap" />
+                    <TextBlock x:ConnectionId='3' x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
                 </Grid>
             </Border>
         </StackPanel>
