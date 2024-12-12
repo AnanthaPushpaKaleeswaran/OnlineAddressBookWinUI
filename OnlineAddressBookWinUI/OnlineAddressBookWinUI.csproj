@@ -14,6 +14,10 @@
 		<SelfContained>true</SelfContained>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Content Remove="Assets\delete.png" />
+	  <Content Remove="Assets\editing.png" />
+	</ItemGroup>
+	<ItemGroup>
 	  <None Remove="Contact\AddContact.xaml" />
 	  <None Remove="Contact\Display.xaml" />
 	  <None Remove="User\SignupPage.xaml" />
@@ -88,7 +92,7 @@
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<PackageCertificateKeyFile>OnlineAddressBookWinUI_TemporaryKey.pfx</PackageCertificateKeyFile>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<AppxBundle>Never</AppxBundle>

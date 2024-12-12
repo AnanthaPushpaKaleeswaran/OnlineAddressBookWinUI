@@ -13,15 +13,42 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0">
             <TextBlock Text="Contacts" Margin="0,40" FontSize="30" />
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="50,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35"></TextBox>
-            <Button Content="Sort by group" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Height="35" Width="150" Margin="200,0"></Button>
+            <Button Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="Logout" x:Name="logoutBtn" Margin="30,0"></Button>
+            <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35"></TextBox>
+            <Button Content="Sort by group" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Height="35" Width="150" Margin="140,0"></Button>
             <Button Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="AddNewContact" x:Name="newBtn"></Button>
         </StackPanel>
+        <ScrollView Height="600" Grid.Row="2" Margin="70,50">
+            <StackPanel>
+                <ListView x:Name="contactList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Contact">
+                            <Grid Margin="5" Background="#E7E5E5" Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="340" />
+                                    <ColumnDefinition Width="130" />
+                                    <ColumnDefinition Width="400" />
+                                    <ColumnDefinition Width="300" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{x:Bind Name}" Grid.Column="0" FontWeight="Bold" FontSize="18" />
+                                <TextBlock Text="{x:Bind PhoneNo}" Grid.Column="1" FontSize="15" Margin="1" />
+                                <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="15" Margin="1" />
+                                <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="15" Margin="1" />
+                                <Button Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70" />
+                                <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollView>
     </Grid>
 </Page>

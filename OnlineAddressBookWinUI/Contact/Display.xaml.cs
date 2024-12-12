@@ -7,6 +7,8 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,7 +25,8 @@ namespace OnlineAddressBookWinUI.Contact
     /// </summary>
     public sealed partial class Display : Page
     {
-        public string email = "a";
+        public string email = "";
+        public ObservableCollection<Contact> Contacts { get; set; }
         public Display()
         {
             this.InitializeComponent();
@@ -41,6 +44,81 @@ namespace OnlineAddressBookWinUI.Contact
                 // Use the string
                 email = message; 
             }
+            LoadContacts();
         }
+
+        private void LoadContacts()
+        {
+            Contacts = LoadContactsFromDB();
+            contactList.ItemsSource = Contacts;
+        }
+
+        public void Logout(object sender,RoutedEventArgs e)
+        {
+            Frame rootFrame = ((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(User.LoginPage));
+        }
+
+        private ObservableCollection<Contact> LoadContactsFromDB()
+        {
+            ObservableCollection<Contact> contacts = new ObservableCollection<Contact> ();
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
+            string connectionString = $"Data Source={dbPath}";
+            using (SQLiteConnection connection=new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                if (connection.State.Equals("Close"))
+                {
+                    Console.Error.WriteLine("Error in opening db");
+                    return contacts;
+                }
+
+                if (!TableExist(connection, "contact"))
+                {
+                    return contacts;
+                }
+
+                string query = "SELECT name,phoneNo,address,contactGroup FROM contact WHERE email=@email";
+                using(SQLiteCommand command=new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@email", email);
+                    using(SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if(reader.HasRows)
+                        {
+                            while(reader.Read())
+                            {
+                                contacts.Add(new Contact
+                                { 
+                                    Name= reader["name"].ToString(),
+                                    PhoneNo = reader["phoneNo"].ToString(),
+                                    Address = reader["address"].ToString(),
+                                    ContactGroup = reader["contactGroup"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            return contacts;
+        }
+
+        protected bool TableExist(SQLiteConnection connection, string tableName)
+        {
+            string query = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@tableName";
+            SQLiteCommand command = new SQLiteCommand(query, connection);
+            command.Parameters.AddWithValue("@tableName", tableName);
+            var result = command.ExecuteScalar();
+            return Convert.ToInt32(result) > 0;
+        }
+    }
+
+    public class Contact
+    {
+        public string Name { get; set; }
+        public string PhoneNo { get; set; }
+        public string Address { get; set; }
+        public string ContactGroup { get; set; }
     }
 }

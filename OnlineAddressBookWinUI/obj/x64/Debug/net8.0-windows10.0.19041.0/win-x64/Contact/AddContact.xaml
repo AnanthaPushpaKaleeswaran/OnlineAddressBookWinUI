@@ -27,25 +27,25 @@
                     <!-- Name Input -->
                     <StackPanel Orientation="Vertical" Grid.Row="0" Margin="45,10">
                         <TextBlock Text="Name" FontSize="15" Margin="5" />
-                        <TextBox x:ConnectionId='8' x:Name="nameInput" Width="300" Margin="5" BorderThickness="0" />
+                        <TextBox x:ConnectionId='9' x:Name="nameInput" Width="300" Margin="5" BorderThickness="0" />
                     </StackPanel>
 
                     <!-- Phone Number Input -->
                     <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
                         <TextBlock Text="Phone Number" FontSize="15" Margin="5" />
-                        <TextBox x:ConnectionId='7' x:Name="phoneNoInput" Width="300" Margin="5" BorderThickness="0" />
+                        <TextBox x:ConnectionId='8' x:Name="phoneNoInput" Width="300" Margin="5" BorderThickness="0" />
                     </StackPanel>
 
                     <!-- Address Input -->
                     <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
                         <TextBlock Text="Address" FontSize="15" Margin="5" />
-                        <TextBox x:ConnectionId='6' x:Name="addressInput" Width="300" Margin="5" Height="80" TextWrapping="Wrap" BorderThickness="0" />
+                        <TextBox x:ConnectionId='7' x:Name="addressInput" Width="300" Margin="5" Height="80" TextWrapping="Wrap" BorderThickness="0" />
                     </StackPanel>
 
                     <!-- Social Media Selection -->
                     <StackPanel Orientation="Vertical" Grid.Row="3" Margin="45,10">
                         <TextBlock Text="Group" FontSize="15" Margin="5" />
-                        <ListView x:ConnectionId='4' x:Name="groupList" ItemsSource="{Binding Groups}" SelectionMode="Multiple" Width="300" Height="120"                                  >
+                        <ListView x:ConnectionId='5' x:Name="groupList" ItemsSource="{Binding Groups}" SelectionMode="Multiple" Width="300" Height="120"                                  >
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Name}" />
@@ -55,10 +55,12 @@
                     </StackPanel>
 
                     <!-- Submit Button -->
-                    <Button x:ConnectionId='2' HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="4" Margin="0,15" Background="#1B9331" Foreground="White" Width="100"                />
-
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="0,15">
+                        <Button x:ConnectionId='3' x:Name="submitBtn"  Margin="20,0" Background="#1B9331" Foreground="White" Width="100"                Content="Submit" />
+                        <Button x:ConnectionId='4'  x:Name="cancelBtn" Content="Cancel" Margin="20,0" Foreground="Black" Width="100"                />
+                    </StackPanel>
                     <!-- Alert Message -->
-                    <TextBlock x:ConnectionId='3' x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
+                    <TextBlock x:ConnectionId='2' x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
                 </Grid>
             </Border>
         </StackPanel>

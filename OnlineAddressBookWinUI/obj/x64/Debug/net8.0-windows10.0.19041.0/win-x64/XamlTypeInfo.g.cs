@@ -226,7 +226,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[20];
+            _typeNameTable = new string[43];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -235,20 +235,43 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
             _typeNameTable[7] = "OnlineAddressBookWinUI.Contact.GroupModel";
-            _typeNameTable[8] = "OnlineAddressBookWinUI.Contact.Display";
-            _typeNameTable[9] = "OnlineAddressBookWinUI.MainWindow";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[11] = "OnlineAddressBookWinUI.User.LoginPage";
-            _typeNameTable[12] = "OnlineAddressBookWinUI.User.SignupPage";
-            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[14] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[15] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[16] = "Int32";
-            _typeNameTable[17] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
+            _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.ScrollView";
+            _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Visibility";
+            _typeNameTable[12] = "Microsoft.UI.Xaml.Controls.ScrollingScrollMode";
+            _typeNameTable[13] = "System.Enum";
+            _typeNameTable[14] = "System.ValueType";
+            _typeNameTable[15] = "Microsoft.UI.Xaml.Controls.ScrollingContentOrientation";
+            _typeNameTable[16] = "Microsoft.UI.Composition.CompositionPropertySet";
+            _typeNameTable[17] = "Microsoft.UI.Composition.CompositionObject";
             _typeNameTable[18] = "Double";
-            _typeNameTable[19] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.Controls.ScrollingChainMode";
+            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.ScrollingRailMode";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ScrollingInputKinds";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.ScrollingInteractionState";
+            _typeNameTable[26] = "Single";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.ScrollingZoomMode";
+            _typeNameTable[28] = "OnlineAddressBookWinUI.Contact.Display";
+            _typeNameTable[29] = "System.Collections.ObjectModel.ObservableCollection`1<OnlineAddressBookWinUI.Contact.Contact>";
+            _typeNameTable[30] = "System.Collections.ObjectModel.Collection`1<OnlineAddressBookWinUI.Contact.Contact>";
+            _typeNameTable[31] = "OnlineAddressBookWinUI.Contact.Contact";
+            _typeNameTable[32] = "String";
+            _typeNameTable[33] = "OnlineAddressBookWinUI.MainWindow";
+            _typeNameTable[34] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[35] = "OnlineAddressBookWinUI.User.LoginPage";
+            _typeNameTable[36] = "OnlineAddressBookWinUI.User.SignupPage";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[39] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[40] = "Int32";
+            _typeNameTable[41] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
+            _typeNameTable[42] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
 
-            _typeTable = new global::System.Type[20];
+            _typeTable = new global::System.Type[43];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -257,18 +280,41 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
             _typeTable[7] = typeof(global::OnlineAddressBookWinUI.Contact.GroupModel);
-            _typeTable[8] = typeof(global::OnlineAddressBookWinUI.Contact.Display);
-            _typeTable[9] = typeof(global::OnlineAddressBookWinUI.MainWindow);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[11] = typeof(global::OnlineAddressBookWinUI.User.LoginPage);
-            _typeTable[12] = typeof(global::OnlineAddressBookWinUI.User.SignupPage);
-            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[15] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[16] = typeof(global::System.Int32);
-            _typeTable[17] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
+            _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollView);
+            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Visibility);
+            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode);
+            _typeTable[13] = typeof(global::System.Enum);
+            _typeTable[14] = typeof(global::System.ValueType);
+            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation);
+            _typeTable[16] = typeof(global::Microsoft.UI.Composition.CompositionPropertySet);
+            _typeTable[17] = typeof(global::Microsoft.UI.Composition.CompositionObject);
             _typeTable[18] = typeof(global::System.Double);
-            _typeTable[19] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingChainMode);
+            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingRailMode);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState);
+            _typeTable[26] = typeof(global::System.Single);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode);
+            _typeTable[28] = typeof(global::OnlineAddressBookWinUI.Contact.Display);
+            _typeTable[29] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>);
+            _typeTable[30] = typeof(global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>);
+            _typeTable[31] = typeof(global::OnlineAddressBookWinUI.Contact.Contact);
+            _typeTable[32] = typeof(global::System.String);
+            _typeTable[33] = typeof(global::OnlineAddressBookWinUI.MainWindow);
+            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[35] = typeof(global::OnlineAddressBookWinUI.User.LoginPage);
+            _typeTable[36] = typeof(global::OnlineAddressBookWinUI.User.SignupPage);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[39] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[40] = typeof(global::System.Int32);
+            _typeTable[41] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
+            _typeTable[42] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -306,24 +352,46 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_AddContact() { return new global::OnlineAddressBookWinUI.Contact.AddContact(); }
         private object Activate_7_GroupModel() { return new global::OnlineAddressBookWinUI.Contact.GroupModel(); }
-        private object Activate_8_Display() { return new global::OnlineAddressBookWinUI.Contact.Display(); }
-        private object Activate_9_MainWindow() { return new global::OnlineAddressBookWinUI.MainWindow(); }
-        private object Activate_11_LoginPage() { return new global::OnlineAddressBookWinUI.User.LoginPage(); }
-        private object Activate_12_SignupPage() { return new global::OnlineAddressBookWinUI.User.SignupPage(); }
-        private object Activate_13_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
-        private object Activate_17_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
-        private object Activate_19_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
+        private object Activate_8_ScrollView() { return new global::Microsoft.UI.Xaml.Controls.ScrollView(); }
+        private object Activate_23_ScrollPresenter() { return new global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter(); }
+        private object Activate_28_Display() { return new global::OnlineAddressBookWinUI.Contact.Display(); }
+        private object Activate_29_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>(); }
+        private object Activate_30_Collection() { return new global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>(); }
+        private object Activate_31_Contact() { return new global::OnlineAddressBookWinUI.Contact.Contact(); }
+        private object Activate_33_MainWindow() { return new global::OnlineAddressBookWinUI.MainWindow(); }
+        private object Activate_35_LoginPage() { return new global::OnlineAddressBookWinUI.User.LoginPage(); }
+        private object Activate_36_SignupPage() { return new global::OnlineAddressBookWinUI.User.SignupPage(); }
+        private object Activate_37_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_41_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
+        private object Activate_42_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_AddContact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.AddContact).TypeHandle);
         private void StaticInitializer_7_GroupModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.GroupModel).TypeHandle);
-        private void StaticInitializer_8_Display() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.Display).TypeHandle);
-        private void StaticInitializer_9_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.MainWindow).TypeHandle);
-        private void StaticInitializer_11_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.LoginPage).TypeHandle);
-        private void StaticInitializer_12_SignupPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.SignupPage).TypeHandle);
-        private void StaticInitializer_13_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_15_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
-        private void StaticInitializer_17_DoubleToObjectConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter).TypeHandle);
-        private void StaticInitializer_19_DoubleToVisibilityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter).TypeHandle);
+        private void StaticInitializer_8_ScrollView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollView).TypeHandle);
+        private void StaticInitializer_12_ScrollingScrollMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode).TypeHandle);
+        private void StaticInitializer_13_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
+        private void StaticInitializer_14_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
+        private void StaticInitializer_15_ScrollingContentOrientation() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation).TypeHandle);
+        private void StaticInitializer_16_CompositionPropertySet() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.CompositionPropertySet).TypeHandle);
+        private void StaticInitializer_17_CompositionObject() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.CompositionObject).TypeHandle);
+        private void StaticInitializer_19_ScrollingScrollBarVisibility() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility).TypeHandle);
+        private void StaticInitializer_20_ScrollingChainMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingChainMode).TypeHandle);
+        private void StaticInitializer_21_ScrollingRailMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingRailMode).TypeHandle);
+        private void StaticInitializer_22_ScrollingInputKinds() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds).TypeHandle);
+        private void StaticInitializer_23_ScrollPresenter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter).TypeHandle);
+        private void StaticInitializer_25_ScrollingInteractionState() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState).TypeHandle);
+        private void StaticInitializer_27_ScrollingZoomMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode).TypeHandle);
+        private void StaticInitializer_28_Display() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.Display).TypeHandle);
+        private void StaticInitializer_29_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>).TypeHandle);
+        private void StaticInitializer_30_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>).TypeHandle);
+        private void StaticInitializer_31_Contact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.Contact).TypeHandle);
+        private void StaticInitializer_33_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.MainWindow).TypeHandle);
+        private void StaticInitializer_35_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.LoginPage).TypeHandle);
+        private void StaticInitializer_36_SignupPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.SignupPage).TypeHandle);
+        private void StaticInitializer_37_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_39_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_41_DoubleToObjectConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter).TypeHandle);
+        private void StaticInitializer_42_DoubleToVisibilityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -331,7 +399,19 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_15_IList(object instance, object item)
+        private void VectorAdd_29_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::OnlineAddressBookWinUI.Contact.Contact>)instance;
+            var newItem = (global::OnlineAddressBookWinUI.Contact.Contact)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_30_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::OnlineAddressBookWinUI.Contact.Contact>)instance;
+            var newItem = (global::OnlineAddressBookWinUI.Contact.Contact)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_39_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -394,46 +474,255 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  OnlineAddressBookWinUI.Contact.Display
-                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Display;
-                userType.StaticInitializer = StaticInitializer_8_Display;
-                userType.SetIsLocalType();
+            case 8:   //  Microsoft.UI.Xaml.Controls.ScrollView
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_8_ScrollView;
+                userType.StaticInitializer = StaticInitializer_8_ScrollView;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ScrollView.Content");
+                userType.AddMemberName("Content");
+                userType.AddMemberName("ComputedHorizontalScrollBarVisibility");
+                userType.AddMemberName("ComputedHorizontalScrollMode");
+                userType.AddMemberName("ComputedVerticalScrollBarVisibility");
+                userType.AddMemberName("ComputedVerticalScrollMode");
+                userType.AddMemberName("ContentOrientation");
+                userType.AddMemberName("CurrentAnchor");
+                userType.AddMemberName("ExpressionAnimationSources");
+                userType.AddMemberName("ExtentHeight");
+                userType.AddMemberName("ExtentWidth");
+                userType.AddMemberName("HorizontalAnchorRatio");
+                userType.AddMemberName("HorizontalOffset");
+                userType.AddMemberName("HorizontalScrollBarVisibility");
+                userType.AddMemberName("HorizontalScrollChainMode");
+                userType.AddMemberName("HorizontalScrollMode");
+                userType.AddMemberName("HorizontalScrollRailMode");
+                userType.AddMemberName("IgnoredInputKinds");
+                userType.AddMemberName("MaxZoomFactor");
+                userType.AddMemberName("MinZoomFactor");
+                userType.AddMemberName("ScrollPresenter");
+                userType.AddMemberName("ScrollableHeight");
+                userType.AddMemberName("ScrollableWidth");
+                userType.AddMemberName("State");
+                userType.AddMemberName("VerticalAnchorRatio");
+                userType.AddMemberName("VerticalOffset");
+                userType.AddMemberName("VerticalScrollBarVisibility");
+                userType.AddMemberName("VerticalScrollChainMode");
+                userType.AddMemberName("VerticalScrollMode");
+                userType.AddMemberName("VerticalScrollRailMode");
+                userType.AddMemberName("ViewportHeight");
+                userType.AddMemberName("ViewportWidth");
+                userType.AddMemberName("ZoomChainMode");
+                userType.AddMemberName("ZoomFactor");
+                userType.AddMemberName("ZoomMode");
                 xamlType = userType;
                 break;
 
-            case 9:   //  OnlineAddressBookWinUI.MainWindow
-                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_9_MainWindow;
-                userType.StaticInitializer = StaticInitializer_9_MainWindow;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 10:   //  Microsoft.UI.Xaml.Window
+            case 9:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  OnlineAddressBookWinUI.User.LoginPage
+            case 10:   //  Microsoft.UI.Xaml.UIElement
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Microsoft.UI.Xaml.Visibility
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 12:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollMode
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_12_ScrollingScrollMode;
+                userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode.Enabled);
+                userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode.Disabled);
+                userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode.Auto);
+                xamlType = userType;
+                break;
+
+            case 13:   //  System.Enum
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.StaticInitializer = StaticInitializer_13_Enum;
+                xamlType = userType;
+                break;
+
+            case 14:   //  System.ValueType
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_14_ValueType;
+                xamlType = userType;
+                break;
+
+            case 15:   //  Microsoft.UI.Xaml.Controls.ScrollingContentOrientation
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_15_ScrollingContentOrientation;
+                userType.AddEnumValue("Vertical", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.Vertical);
+                userType.AddEnumValue("Horizontal", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.Horizontal);
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.None);
+                userType.AddEnumValue("Both", global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation.Both);
+                xamlType = userType;
+                break;
+
+            case 16:   //  Microsoft.UI.Composition.CompositionPropertySet
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Composition.CompositionObject"));
+                userType.StaticInitializer = StaticInitializer_16_CompositionPropertySet;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Microsoft.UI.Composition.CompositionObject
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_17_CompositionObject;
+                xamlType = userType;
+                break;
+
+            case 18:   //  Double
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 19:   //  Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_19_ScrollingScrollBarVisibility;
+                userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility.Auto);
+                userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility.Visible);
+                userType.AddEnumValue("Hidden", global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility.Hidden);
+                xamlType = userType;
+                break;
+
+            case 20:   //  Microsoft.UI.Xaml.Controls.ScrollingChainMode
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_20_ScrollingChainMode;
+                userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.ScrollingChainMode.Auto);
+                userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.ScrollingChainMode.Always);
+                userType.AddEnumValue("Never", global::Microsoft.UI.Xaml.Controls.ScrollingChainMode.Never);
+                xamlType = userType;
+                break;
+
+            case 21:   //  Microsoft.UI.Xaml.Controls.ScrollingRailMode
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_21_ScrollingRailMode;
+                userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingRailMode.Enabled);
+                userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingRailMode.Disabled);
+                xamlType = userType;
+                break;
+
+            case 22:   //  Microsoft.UI.Xaml.Controls.ScrollingInputKinds
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_22_ScrollingInputKinds;
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.None);
+                userType.AddEnumValue("Touch", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.Touch);
+                userType.AddEnumValue("Pen", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.Pen);
+                userType.AddEnumValue("MouseWheel", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.MouseWheel);
+                userType.AddEnumValue("Keyboard", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.Keyboard);
+                userType.AddEnumValue("Gamepad", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.Gamepad);
+                userType.AddEnumValue("All", global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds.All);
+                xamlType = userType;
+                break;
+
+            case 23:   //  Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.StaticInitializer = StaticInitializer_23_ScrollPresenter;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter.Content");
+                userType.AddMemberName("Content");
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 24:   //  Microsoft.UI.Xaml.FrameworkElement
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 25:   //  Microsoft.UI.Xaml.Controls.ScrollingInteractionState
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_25_ScrollingInteractionState;
+                userType.AddEnumValue("Idle", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Idle);
+                userType.AddEnumValue("Interaction", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Interaction);
+                userType.AddEnumValue("Inertia", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Inertia);
+                userType.AddEnumValue("Animation", global::Microsoft.UI.Xaml.Controls.ScrollingInteractionState.Animation);
+                xamlType = userType;
+                break;
+
+            case 26:   //  Single
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 27:   //  Microsoft.UI.Xaml.Controls.ScrollingZoomMode
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_27_ScrollingZoomMode;
+                userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode.Enabled);
+                userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode.Disabled);
+                xamlType = userType;
+                break;
+
+            case 28:   //  OnlineAddressBookWinUI.Contact.Display
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_LoginPage;
-                userType.StaticInitializer = StaticInitializer_11_LoginPage;
+                userType.Activator = Activate_28_Display;
+                userType.StaticInitializer = StaticInitializer_28_Display;
+                userType.AddMemberName("Contacts");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  OnlineAddressBookWinUI.User.SignupPage
-                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_SignupPage;
-                userType.StaticInitializer = StaticInitializer_12_SignupPage;
+            case 29:   //  System.Collections.ObjectModel.ObservableCollection`1<OnlineAddressBookWinUI.Contact.Contact>
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<OnlineAddressBookWinUI.Contact.Contact>"));
+                userType.StaticInitializer = StaticInitializer_29_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_29_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 30:   //  System.Collections.ObjectModel.Collection`1<OnlineAddressBookWinUI.Contact.Contact>
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_30_Collection;
+                userType.StaticInitializer = StaticInitializer_30_Collection;
+                userType.CollectionAdd = VectorAdd_30_Collection;
+                xamlType = userType;
+                break;
+
+            case 31:   //  OnlineAddressBookWinUI.Contact.Contact
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_31_Contact;
+                userType.StaticInitializer = StaticInitializer_31_Contact;
+                userType.AddMemberName("Name");
+                userType.AddMemberName("PhoneNo");
+                userType.AddMemberName("Address");
+                userType.AddMemberName("ContactGroup");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 32:   //  String
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 33:   //  OnlineAddressBookWinUI.MainWindow
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_33_MainWindow;
+                userType.StaticInitializer = StaticInitializer_33_MainWindow;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 34:   //  Microsoft.UI.Xaml.Window
+                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 35:   //  OnlineAddressBookWinUI.User.LoginPage
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_35_LoginPage;
+                userType.StaticInitializer = StaticInitializer_35_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  OnlineAddressBookWinUI.User.SignupPage
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_36_SignupPage;
+                userType.StaticInitializer = StaticInitializer_36_SignupPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_13_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_13_TreeViewNode;
+                userType.Activator = Activate_37_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_37_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -445,26 +734,26 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  Microsoft.UI.Xaml.DependencyObject
+            case 38:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 15:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 39:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_15_IList;
-                userType.CollectionAdd = VectorAdd_15_IList;
+                userType.StaticInitializer = StaticInitializer_39_IList;
+                userType.CollectionAdd = VectorAdd_39_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Int32
+            case 40:   //  Int32
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
+            case 41:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_17_DoubleToObjectConverter;
-                userType.StaticInitializer = StaticInitializer_17_DoubleToObjectConverter;
+                userType.Activator = Activate_41_DoubleToObjectConverter;
+                userType.StaticInitializer = StaticInitializer_41_DoubleToObjectConverter;
                 userType.AddMemberName("TrueValue");
                 userType.AddMemberName("FalseValue");
                 userType.AddMemberName("NullValue");
@@ -474,14 +763,10 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 18:   //  Double
-                xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 19:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
+            case 42:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter"));
-                userType.Activator = Activate_19_DoubleToVisibilityConverter;
-                userType.StaticInitializer = StaticInitializer_19_DoubleToVisibilityConverter;
+                userType.Activator = Activate_42_DoubleToVisibilityConverter;
+                userType.StaticInitializer = StaticInitializer_42_DoubleToVisibilityConverter;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
@@ -568,102 +853,417 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             var that = (global::OnlineAddressBookWinUI.Contact.AddContact)instance;
             that.GroupModel = (global::OnlineAddressBookWinUI.Contact.GroupModel)Value;
         }
-        private object get_2_TreeViewNode_Children(object instance)
+        private object get_2_ScrollView_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.Content;
+        }
+        private void set_2_ScrollView_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.Content = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_3_ScrollView_ComputedHorizontalScrollBarVisibility(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ComputedHorizontalScrollBarVisibility;
+        }
+        private object get_4_ScrollView_ComputedHorizontalScrollMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ComputedHorizontalScrollMode;
+        }
+        private object get_5_ScrollView_ComputedVerticalScrollBarVisibility(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ComputedVerticalScrollBarVisibility;
+        }
+        private object get_6_ScrollView_ComputedVerticalScrollMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ComputedVerticalScrollMode;
+        }
+        private object get_7_ScrollView_ContentOrientation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ContentOrientation;
+        }
+        private void set_7_ScrollView_ContentOrientation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.ContentOrientation = (global::Microsoft.UI.Xaml.Controls.ScrollingContentOrientation)Value;
+        }
+        private object get_8_ScrollView_CurrentAnchor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.CurrentAnchor;
+        }
+        private object get_9_ScrollView_ExpressionAnimationSources(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ExpressionAnimationSources;
+        }
+        private object get_10_ScrollView_ExtentHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ExtentHeight;
+        }
+        private object get_11_ScrollView_ExtentWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ExtentWidth;
+        }
+        private object get_12_ScrollView_HorizontalAnchorRatio(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalAnchorRatio;
+        }
+        private void set_12_ScrollView_HorizontalAnchorRatio(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.HorizontalAnchorRatio = (global::System.Double)Value;
+        }
+        private object get_13_ScrollView_HorizontalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalOffset;
+        }
+        private object get_14_ScrollView_HorizontalScrollBarVisibility(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalScrollBarVisibility;
+        }
+        private void set_14_ScrollView_HorizontalScrollBarVisibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.HorizontalScrollBarVisibility = (global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility)Value;
+        }
+        private object get_15_ScrollView_HorizontalScrollChainMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalScrollChainMode;
+        }
+        private void set_15_ScrollView_HorizontalScrollChainMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.HorizontalScrollChainMode = (global::Microsoft.UI.Xaml.Controls.ScrollingChainMode)Value;
+        }
+        private object get_16_ScrollView_HorizontalScrollMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalScrollMode;
+        }
+        private void set_16_ScrollView_HorizontalScrollMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.HorizontalScrollMode = (global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode)Value;
+        }
+        private object get_17_ScrollView_HorizontalScrollRailMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.HorizontalScrollRailMode;
+        }
+        private void set_17_ScrollView_HorizontalScrollRailMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.HorizontalScrollRailMode = (global::Microsoft.UI.Xaml.Controls.ScrollingRailMode)Value;
+        }
+        private object get_18_ScrollView_IgnoredInputKinds(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.IgnoredInputKinds;
+        }
+        private void set_18_ScrollView_IgnoredInputKinds(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.IgnoredInputKinds = (global::Microsoft.UI.Xaml.Controls.ScrollingInputKinds)Value;
+        }
+        private object get_19_ScrollView_MaxZoomFactor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.MaxZoomFactor;
+        }
+        private void set_19_ScrollView_MaxZoomFactor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.MaxZoomFactor = (global::System.Double)Value;
+        }
+        private object get_20_ScrollView_MinZoomFactor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.MinZoomFactor;
+        }
+        private void set_20_ScrollView_MinZoomFactor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.MinZoomFactor = (global::System.Double)Value;
+        }
+        private object get_21_ScrollView_ScrollPresenter(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ScrollPresenter;
+        }
+        private object get_22_ScrollPresenter_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter)instance;
+            return that.Content;
+        }
+        private void set_22_ScrollPresenter_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter)instance;
+            that.Content = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_23_ScrollView_ScrollableHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ScrollableHeight;
+        }
+        private object get_24_ScrollView_ScrollableWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ScrollableWidth;
+        }
+        private object get_25_ScrollView_State(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.State;
+        }
+        private object get_26_ScrollView_VerticalAnchorRatio(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalAnchorRatio;
+        }
+        private void set_26_ScrollView_VerticalAnchorRatio(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.VerticalAnchorRatio = (global::System.Double)Value;
+        }
+        private object get_27_ScrollView_VerticalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalOffset;
+        }
+        private object get_28_ScrollView_VerticalScrollBarVisibility(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalScrollBarVisibility;
+        }
+        private void set_28_ScrollView_VerticalScrollBarVisibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.VerticalScrollBarVisibility = (global::Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility)Value;
+        }
+        private object get_29_ScrollView_VerticalScrollChainMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalScrollChainMode;
+        }
+        private void set_29_ScrollView_VerticalScrollChainMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.VerticalScrollChainMode = (global::Microsoft.UI.Xaml.Controls.ScrollingChainMode)Value;
+        }
+        private object get_30_ScrollView_VerticalScrollMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalScrollMode;
+        }
+        private void set_30_ScrollView_VerticalScrollMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.VerticalScrollMode = (global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode)Value;
+        }
+        private object get_31_ScrollView_VerticalScrollRailMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.VerticalScrollRailMode;
+        }
+        private void set_31_ScrollView_VerticalScrollRailMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.VerticalScrollRailMode = (global::Microsoft.UI.Xaml.Controls.ScrollingRailMode)Value;
+        }
+        private object get_32_ScrollView_ViewportHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ViewportHeight;
+        }
+        private object get_33_ScrollView_ViewportWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ViewportWidth;
+        }
+        private object get_34_ScrollView_ZoomChainMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ZoomChainMode;
+        }
+        private void set_34_ScrollView_ZoomChainMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.ZoomChainMode = (global::Microsoft.UI.Xaml.Controls.ScrollingChainMode)Value;
+        }
+        private object get_35_ScrollView_ZoomFactor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ZoomFactor;
+        }
+        private object get_36_ScrollView_ZoomMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            return that.ZoomMode;
+        }
+        private void set_36_ScrollView_ZoomMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ScrollView)instance;
+            that.ZoomMode = (global::Microsoft.UI.Xaml.Controls.ScrollingZoomMode)Value;
+        }
+        private object get_37_Display_Contacts(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Display)instance;
+            return that.Contacts;
+        }
+        private void set_37_Display_Contacts(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Display)instance;
+            that.Contacts = (global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>)Value;
+        }
+        private object get_38_Contact_Name(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            return that.Name;
+        }
+        private void set_38_Contact_Name(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_39_Contact_PhoneNo(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            return that.PhoneNo;
+        }
+        private void set_39_Contact_PhoneNo(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            that.PhoneNo = (global::System.String)Value;
+        }
+        private object get_40_Contact_Address(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            return that.Address;
+        }
+        private void set_40_Contact_Address(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            that.Address = (global::System.String)Value;
+        }
+        private object get_41_Contact_ContactGroup(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            return that.ContactGroup;
+        }
+        private void set_41_Contact_ContactGroup(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
+            that.ContactGroup = (global::System.String)Value;
+        }
+        private object get_42_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_3_TreeViewNode_Content(object instance)
+        private object get_43_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_3_TreeViewNode_Content(object instance, object Value)
+        private void set_43_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_4_TreeViewNode_Depth(object instance)
+        private object get_44_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_5_TreeViewNode_HasChildren(object instance)
+        private object get_45_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_6_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_46_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_6_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_46_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_7_TreeViewNode_IsExpanded(object instance)
+        private object get_47_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_7_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_47_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_8_TreeViewNode_Parent(object instance)
+        private object get_48_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
         }
-        private object get_9_DoubleToObjectConverter_TrueValue(object instance)
+        private object get_49_DoubleToObjectConverter_TrueValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.TrueValue;
         }
-        private void set_9_DoubleToObjectConverter_TrueValue(object instance, object Value)
+        private void set_49_DoubleToObjectConverter_TrueValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.TrueValue = (global::System.Object)Value;
         }
-        private object get_10_DoubleToObjectConverter_FalseValue(object instance)
+        private object get_50_DoubleToObjectConverter_FalseValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.FalseValue;
         }
-        private void set_10_DoubleToObjectConverter_FalseValue(object instance, object Value)
+        private void set_50_DoubleToObjectConverter_FalseValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.FalseValue = (global::System.Object)Value;
         }
-        private object get_11_DoubleToObjectConverter_NullValue(object instance)
+        private object get_51_DoubleToObjectConverter_NullValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.NullValue;
         }
-        private void set_11_DoubleToObjectConverter_NullValue(object instance, object Value)
+        private void set_51_DoubleToObjectConverter_NullValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.NullValue = (global::System.Object)Value;
         }
-        private object get_12_DoubleToObjectConverter_GreaterThan(object instance)
+        private object get_52_DoubleToObjectConverter_GreaterThan(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.GreaterThan;
         }
-        private void set_12_DoubleToObjectConverter_GreaterThan(object instance, object Value)
+        private void set_52_DoubleToObjectConverter_GreaterThan(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.GreaterThan = (global::System.Double)Value;
         }
-        private object get_13_DoubleToObjectConverter_LessThan(object instance)
+        private object get_53_DoubleToObjectConverter_LessThan(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.LessThan;
         }
-        private void set_13_DoubleToObjectConverter_LessThan(object instance, object Value)
+        private void set_53_DoubleToObjectConverter_LessThan(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.LessThan = (global::System.Double)Value;
@@ -689,86 +1289,349 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlMember.Getter = get_1_AddContact_GroupModel;
                 xamlMember.Setter = set_1_AddContact_GroupModel;
                 break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.Content":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_ScrollView_Content;
+                xamlMember.Setter = set_2_ScrollView_Content;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ComputedHorizontalScrollBarVisibility":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ComputedHorizontalScrollBarVisibility", "Microsoft.UI.Xaml.Visibility");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_3_ScrollView_ComputedHorizontalScrollBarVisibility;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ComputedHorizontalScrollMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ComputedHorizontalScrollMode", "Microsoft.UI.Xaml.Controls.ScrollingScrollMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_4_ScrollView_ComputedHorizontalScrollMode;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ComputedVerticalScrollBarVisibility":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ComputedVerticalScrollBarVisibility", "Microsoft.UI.Xaml.Visibility");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_ScrollView_ComputedVerticalScrollBarVisibility;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ComputedVerticalScrollMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ComputedVerticalScrollMode", "Microsoft.UI.Xaml.Controls.ScrollingScrollMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_6_ScrollView_ComputedVerticalScrollMode;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ContentOrientation":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ContentOrientation", "Microsoft.UI.Xaml.Controls.ScrollingContentOrientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_7_ScrollView_ContentOrientation;
+                xamlMember.Setter = set_7_ScrollView_ContentOrientation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.CurrentAnchor":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "CurrentAnchor", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.Getter = get_8_ScrollView_CurrentAnchor;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ExpressionAnimationSources":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ExpressionAnimationSources", "Microsoft.UI.Composition.CompositionPropertySet");
+                xamlMember.Getter = get_9_ScrollView_ExpressionAnimationSources;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ExtentHeight":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ExtentHeight", "Double");
+                xamlMember.Getter = get_10_ScrollView_ExtentHeight;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ExtentWidth":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ExtentWidth", "Double");
+                xamlMember.Getter = get_11_ScrollView_ExtentWidth;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalAnchorRatio":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalAnchorRatio", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_12_ScrollView_HorizontalAnchorRatio;
+                xamlMember.Setter = set_12_ScrollView_HorizontalAnchorRatio;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalOffset":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalOffset", "Double");
+                xamlMember.Getter = get_13_ScrollView_HorizontalOffset;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalScrollBarVisibility":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalScrollBarVisibility", "Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_14_ScrollView_HorizontalScrollBarVisibility;
+                xamlMember.Setter = set_14_ScrollView_HorizontalScrollBarVisibility;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalScrollChainMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalScrollChainMode", "Microsoft.UI.Xaml.Controls.ScrollingChainMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_15_ScrollView_HorizontalScrollChainMode;
+                xamlMember.Setter = set_15_ScrollView_HorizontalScrollChainMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalScrollMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalScrollMode", "Microsoft.UI.Xaml.Controls.ScrollingScrollMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_16_ScrollView_HorizontalScrollMode;
+                xamlMember.Setter = set_16_ScrollView_HorizontalScrollMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.HorizontalScrollRailMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HorizontalScrollRailMode", "Microsoft.UI.Xaml.Controls.ScrollingRailMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_17_ScrollView_HorizontalScrollRailMode;
+                xamlMember.Setter = set_17_ScrollView_HorizontalScrollRailMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.IgnoredInputKinds":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "IgnoredInputKinds", "Microsoft.UI.Xaml.Controls.ScrollingInputKinds");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_18_ScrollView_IgnoredInputKinds;
+                xamlMember.Setter = set_18_ScrollView_IgnoredInputKinds;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.MaxZoomFactor":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "MaxZoomFactor", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_19_ScrollView_MaxZoomFactor;
+                xamlMember.Setter = set_19_ScrollView_MaxZoomFactor;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.MinZoomFactor":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "MinZoomFactor", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_20_ScrollView_MinZoomFactor;
+                xamlMember.Setter = set_20_ScrollView_MinZoomFactor;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ScrollPresenter":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ScrollPresenter", "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_21_ScrollView_ScrollPresenter;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter.Content":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_22_ScrollPresenter_Content;
+                xamlMember.Setter = set_22_ScrollPresenter_Content;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ScrollableHeight":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ScrollableHeight", "Double");
+                xamlMember.Getter = get_23_ScrollView_ScrollableHeight;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ScrollableWidth":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ScrollableWidth", "Double");
+                xamlMember.Getter = get_24_ScrollView_ScrollableWidth;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.State":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "State", "Microsoft.UI.Xaml.Controls.ScrollingInteractionState");
+                xamlMember.Getter = get_25_ScrollView_State;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalAnchorRatio":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalAnchorRatio", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_26_ScrollView_VerticalAnchorRatio;
+                xamlMember.Setter = set_26_ScrollView_VerticalAnchorRatio;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalOffset":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalOffset", "Double");
+                xamlMember.Getter = get_27_ScrollView_VerticalOffset;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalScrollBarVisibility":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalScrollBarVisibility", "Microsoft.UI.Xaml.Controls.ScrollingScrollBarVisibility");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_28_ScrollView_VerticalScrollBarVisibility;
+                xamlMember.Setter = set_28_ScrollView_VerticalScrollBarVisibility;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalScrollChainMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalScrollChainMode", "Microsoft.UI.Xaml.Controls.ScrollingChainMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_29_ScrollView_VerticalScrollChainMode;
+                xamlMember.Setter = set_29_ScrollView_VerticalScrollChainMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalScrollMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalScrollMode", "Microsoft.UI.Xaml.Controls.ScrollingScrollMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_30_ScrollView_VerticalScrollMode;
+                xamlMember.Setter = set_30_ScrollView_VerticalScrollMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.VerticalScrollRailMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "VerticalScrollRailMode", "Microsoft.UI.Xaml.Controls.ScrollingRailMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_31_ScrollView_VerticalScrollRailMode;
+                xamlMember.Setter = set_31_ScrollView_VerticalScrollRailMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ViewportHeight":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ViewportHeight", "Double");
+                xamlMember.Getter = get_32_ScrollView_ViewportHeight;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ViewportWidth":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ViewportWidth", "Double");
+                xamlMember.Getter = get_33_ScrollView_ViewportWidth;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ZoomChainMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ZoomChainMode", "Microsoft.UI.Xaml.Controls.ScrollingChainMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_34_ScrollView_ZoomChainMode;
+                xamlMember.Setter = set_34_ScrollView_ZoomChainMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ZoomFactor":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ZoomFactor", "Single");
+                xamlMember.Getter = get_35_ScrollView_ZoomFactor;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ScrollView.ZoomMode":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ZoomMode", "Microsoft.UI.Xaml.Controls.ScrollingZoomMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_36_ScrollView_ZoomMode;
+                xamlMember.Setter = set_36_ScrollView_ZoomMode;
+                break;
+            case "OnlineAddressBookWinUI.Contact.Display.Contacts":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Display");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Contacts", "System.Collections.ObjectModel.ObservableCollection`1<OnlineAddressBookWinUI.Contact.Contact>");
+                xamlMember.Getter = get_37_Display_Contacts;
+                xamlMember.Setter = set_37_Display_Contacts;
+                break;
+            case "OnlineAddressBookWinUI.Contact.Contact.Name":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Contact");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_38_Contact_Name;
+                xamlMember.Setter = set_38_Contact_Name;
+                break;
+            case "OnlineAddressBookWinUI.Contact.Contact.PhoneNo":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Contact");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "PhoneNo", "String");
+                xamlMember.Getter = get_39_Contact_PhoneNo;
+                xamlMember.Setter = set_39_Contact_PhoneNo;
+                break;
+            case "OnlineAddressBookWinUI.Contact.Contact.Address":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Contact");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Address", "String");
+                xamlMember.Getter = get_40_Contact_Address;
+                xamlMember.Setter = set_40_Contact_Address;
+                break;
+            case "OnlineAddressBookWinUI.Contact.Contact.ContactGroup":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Contact");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "ContactGroup", "String");
+                xamlMember.Getter = get_41_Contact_ContactGroup;
+                xamlMember.Setter = set_41_Contact_ContactGroup;
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_2_TreeViewNode_Children;
+                xamlMember.Getter = get_42_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_TreeViewNode_Content;
-                xamlMember.Setter = set_3_TreeViewNode_Content;
+                xamlMember.Getter = get_43_TreeViewNode_Content;
+                xamlMember.Setter = set_43_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_TreeViewNode_Depth;
+                xamlMember.Getter = get_44_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_45_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_6_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_6_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_46_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_46_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_7_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_47_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_47_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_8_TreeViewNode_Parent;
+                xamlMember.Getter = get_48_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.TrueValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "TrueValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_DoubleToObjectConverter_TrueValue;
-                xamlMember.Setter = set_9_DoubleToObjectConverter_TrueValue;
+                xamlMember.Getter = get_49_DoubleToObjectConverter_TrueValue;
+                xamlMember.Setter = set_49_DoubleToObjectConverter_TrueValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.FalseValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "FalseValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_DoubleToObjectConverter_FalseValue;
-                xamlMember.Setter = set_10_DoubleToObjectConverter_FalseValue;
+                xamlMember.Getter = get_50_DoubleToObjectConverter_FalseValue;
+                xamlMember.Setter = set_50_DoubleToObjectConverter_FalseValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.NullValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "NullValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_DoubleToObjectConverter_NullValue;
-                xamlMember.Setter = set_11_DoubleToObjectConverter_NullValue;
+                xamlMember.Getter = get_51_DoubleToObjectConverter_NullValue;
+                xamlMember.Setter = set_51_DoubleToObjectConverter_NullValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.GreaterThan":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "GreaterThan", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_12_DoubleToObjectConverter_GreaterThan;
-                xamlMember.Setter = set_12_DoubleToObjectConverter_GreaterThan;
+                xamlMember.Getter = get_52_DoubleToObjectConverter_GreaterThan;
+                xamlMember.Setter = set_52_DoubleToObjectConverter_GreaterThan;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.LessThan":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "LessThan", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_DoubleToObjectConverter_LessThan;
-                xamlMember.Setter = set_13_DoubleToObjectConverter_LessThan;
+                xamlMember.Getter = get_53_DoubleToObjectConverter_LessThan;
+                xamlMember.Setter = set_53_DoubleToObjectConverter_LessThan;
                 break;
             }
             return xamlMember;

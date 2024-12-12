@@ -34,8 +34,6 @@ namespace OnlineAddressBookWinUI.User
         public LoginPage()
         {
             this.InitializeComponent();
-            emailInput.Text = "ananth@gmail.com";
-            passwordInput.Password = "Ananth@123";
         }
 
         public void Login(object sender,RoutedEventArgs e)

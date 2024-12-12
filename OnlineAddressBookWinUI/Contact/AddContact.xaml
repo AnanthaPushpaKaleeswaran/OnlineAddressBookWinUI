@@ -55,8 +55,10 @@
                     </StackPanel>
 
                     <!-- Submit Button -->
-                    <Button HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="4" Margin="0,15" Background="#1B9331" Foreground="White" Width="100" Click="Submit" />
-
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="0,15">
+                        <Button x:Name="submitBtn"  Margin="20,0" Background="#1B9331" Foreground="White" Width="100" Click="Submit" Content="Submit" />
+                        <Button  x:Name="cancelBtn" Content="Cancel" Margin="20,0" Foreground="Black" Width="100" Click="Cancel" />
+                    </StackPanel>
                     <!-- Alert Message -->
                     <TextBlock x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
                 </Grid>

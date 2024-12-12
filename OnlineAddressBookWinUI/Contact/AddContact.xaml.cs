@@ -4,12 +4,14 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using OnlineAddressBookWinUI.User;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -50,7 +52,7 @@ namespace OnlineAddressBookWinUI.Contact
         //groupSelection from xaml
         private void groupSelection(object sender,SelectionChangedEventArgs e)
         {
-            foreach (var item in e.AddedItems)
+            foreach (var item in groupList.SelectedItems)
             {
                 if (item is Group selectedGroup)
                 {
@@ -62,7 +64,6 @@ namespace OnlineAddressBookWinUI.Contact
                     }
                 }
             }
-
         }
 
         //add new group using content dialog
@@ -131,6 +132,12 @@ namespace OnlineAddressBookWinUI.Contact
 
             // Show the dialog
             await addNewGroupDialog.ShowAsync();
+        }
+
+        public void Cancel(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = ((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(Display), email);
         }
 
         //submit
@@ -268,7 +275,6 @@ namespace OnlineAddressBookWinUI.Contact
                                                 Group newGroup = new Group { Name = modiGroupName, ID = id };
                                                 id++;
                                                 GroupModel.Groups.Add(newGroup);
-                                                alert.Text = newGroup.Name;
                                             }
                                             groupBuilder.Clear(); // Reset the group builder
                                         }
@@ -288,10 +294,6 @@ namespace OnlineAddressBookWinUI.Contact
                                     }
                                 }
                             }
-                        }
-                        else
-                        {
-                            alert.Text = email + "ji";
                         }
                     }
                 }
@@ -356,35 +358,35 @@ namespace OnlineAddressBookWinUI.Contact
             {
                 return false;
             }
-            string regexstr = @"^[a-zA-Z0-9]+$";
+            string regexstr = @"^[a-zA-Z0-9\s]+$";
             Regex re = new Regex(regexstr);
             return re.IsMatch(name);
         }
 
         private string makeGroupString()
         {
-            string res = "";
-            int groupCount = GroupModel.Groups.Count;
-            int index = 0;
-
-            foreach (Group indGroup in GroupModel.Groups)
+            List<string> groupNames = new List<string>();
+            int groupCount = groupList.SelectedItems.Count;
+            alert.Text = "" + groupCount;
+            foreach (var item in groupList.SelectedItems)
             {
-                if (indGroup.Name != "New Group")
+                if(item is Group selectedGroup)
                 {
-                    res += indGroup.Name;
-                    index++;
-
-                    // Only add a comma if it's not the last group
-                    if (index < groupCount-1)
-                    {
-                        res += ",";
-                    }
+                    groupNames.Add(selectedGroup.Name);
                 }
             }
-
+            string res = "";
+            groupNames.Sort();
+            for(int index=0;index<groupNames.Count;index++)
+            {
+                res+= groupNames[index];
+                if (index < groupNames.Count - 1)
+                {
+                    res+= ",";
+                }
+            }
             return res;
         }
-
     }
 
     //group model class
