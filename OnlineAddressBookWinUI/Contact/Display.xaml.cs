@@ -276,7 +276,6 @@ namespace OnlineAddressBookWinUI.Contact
         {
             var button=sender as Button;
             Contact contact=button?.Tag as Contact;
-            Contacts.Remove(contact);
             DeleteModal(contact);
             contactList.ItemsSource = null;
             contactList.ItemsSource = Contacts;
@@ -296,6 +295,7 @@ namespace OnlineAddressBookWinUI.Contact
             deleteDialog.XamlRoot = this.XamlRoot;
             deleteDialog.PrimaryButtonClick += (sender, args) =>
             {
+                Contacts.Remove(contact);
                 deleteDialog.Hide();
                 DeleteContact(contact);
             };
@@ -361,6 +361,27 @@ namespace OnlineAddressBookWinUI.Contact
 
             // Close the dialog
             addNewGroupDialog.Hide();
+        }
+
+        public void SearchContacts(object sender,RoutedEventArgs e)
+        {
+            ObservableCollection<Contact> searchContacts = new ObservableCollection<Contact>();
+            string searchText=searchInput.Text;
+            foreach(Contact contact in Contacts)
+            {
+                string mainString=contact.Name.ToLower();
+                string sub = searchText.ToLower();
+                if (mainString.Contains(sub))
+                {
+                    searchContacts.Add(contact);
+                }
+            }
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                contactList.ItemsSource = Contacts;
+                return;
+            }
+            contactList.ItemsSource = searchContacts;
         }
     }
 

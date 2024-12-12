@@ -24,7 +24,7 @@
         <!--To show the top buttons-->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="Logout" x:Name="logoutBtn" Margin="30,0"></Button>
-            <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35"></TextBox>
+            <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35" TextChanged="SearchContacts" Name="searchInput" />
             <ComboBox x:Name="viewByGroup" Width="150" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Margin="140,0" PlaceholderText="View By Group" SelectionChanged="ViewGroup">
                 <ComboBoxItem />
             </ComboBox>
