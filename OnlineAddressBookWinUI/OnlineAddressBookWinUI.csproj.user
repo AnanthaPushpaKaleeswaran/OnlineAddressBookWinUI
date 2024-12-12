@@ -10,7 +10,7 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
-    <Page Update="Contact\AddContact.xaml">
+    <Page Update="Contact\AddorEditContact.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Contact\Display.xaml">

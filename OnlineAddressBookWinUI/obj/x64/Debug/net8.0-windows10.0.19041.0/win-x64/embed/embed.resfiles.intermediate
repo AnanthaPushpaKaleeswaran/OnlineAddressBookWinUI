@@ -1,5 +1,5 @@
 App.xbf
-Contact\AddContact.xbf
+Contact\AddorEditContact.xbf
 Contact\Display.xbf
 MainWindow.xbf
 User\LoginPage.xbf

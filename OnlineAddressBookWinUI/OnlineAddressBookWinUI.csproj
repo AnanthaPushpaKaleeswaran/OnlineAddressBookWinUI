@@ -18,7 +18,6 @@
 	  <Content Remove="Assets\editing.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Remove="Contact\AddContact.xaml" />
 	  <None Remove="Contact\Display.xaml" />
 	  <None Remove="User\SignupPage.xaml" />
 	</ItemGroup>
@@ -52,7 +51,7 @@
 		<PackageReference Include="System.Data.SQLite" Version="1.0.119" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Page Update="Contact\AddContact.xaml">
+	  <Page Update="Contact\AddorEditContact.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	</ItemGroup>

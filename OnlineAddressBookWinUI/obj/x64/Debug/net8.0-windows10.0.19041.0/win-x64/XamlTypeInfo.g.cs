@@ -231,7 +231,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "OnlineAddressBookWinUI.Contact.AddContact";
+            _typeNameTable[4] = "OnlineAddressBookWinUI.Contact.AddorEditContact";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
             _typeNameTable[7] = "OnlineAddressBookWinUI.Contact.GroupModel";
@@ -278,7 +278,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::OnlineAddressBookWinUI.Contact.AddContact);
+            _typeTable[4] = typeof(global::OnlineAddressBookWinUI.Contact.AddorEditContact);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
             _typeTable[7] = typeof(global::OnlineAddressBookWinUI.Contact.GroupModel);
@@ -354,7 +354,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_AddContact() { return new global::OnlineAddressBookWinUI.Contact.AddContact(); }
+        private object Activate_4_AddorEditContact() { return new global::OnlineAddressBookWinUI.Contact.AddorEditContact(); }
         private object Activate_7_GroupModel() { return new global::OnlineAddressBookWinUI.Contact.GroupModel(); }
         private object Activate_8_ScrollView() { return new global::Microsoft.UI.Xaml.Controls.ScrollView(); }
         private object Activate_23_ScrollPresenter() { return new global::Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter(); }
@@ -371,7 +371,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         private object Activate_43_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
         private object Activate_44_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
-        private void StaticInitializer_4_AddContact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.AddContact).TypeHandle);
+        private void StaticInitializer_4_AddorEditContact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.AddorEditContact).TypeHandle);
         private void StaticInitializer_7_GroupModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.GroupModel).TypeHandle);
         private void StaticInitializer_8_ScrollView() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollView).TypeHandle);
         private void StaticInitializer_12_ScrollingScrollMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ScrollingScrollMode).TypeHandle);
@@ -469,10 +469,10 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  OnlineAddressBookWinUI.Contact.AddContact
+            case 4:   //  OnlineAddressBookWinUI.Contact.AddorEditContact
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_AddContact;
-                userType.StaticInitializer = StaticInitializer_4_AddContact;
+                userType.Activator = Activate_4_AddorEditContact;
+                userType.StaticInitializer = StaticInitializer_4_AddorEditContact;
                 userType.AddMemberName("GroupModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -880,14 +880,14 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
-        private object get_1_AddContact_GroupModel(object instance)
+        private object get_1_AddorEditContact_GroupModel(object instance)
         {
-            var that = (global::OnlineAddressBookWinUI.Contact.AddContact)instance;
+            var that = (global::OnlineAddressBookWinUI.Contact.AddorEditContact)instance;
             return that.GroupModel;
         }
-        private void set_1_AddContact_GroupModel(object instance, object Value)
+        private void set_1_AddorEditContact_GroupModel(object instance, object Value)
         {
-            var that = (global::OnlineAddressBookWinUI.Contact.AddContact)instance;
+            var that = (global::OnlineAddressBookWinUI.Contact.AddorEditContact)instance;
             that.GroupModel = (global::OnlineAddressBookWinUI.Contact.GroupModel)Value;
         }
         private object get_2_ScrollView_Content(object instance)
@@ -1330,11 +1330,11 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
                 break;
-            case "OnlineAddressBookWinUI.Contact.AddContact.GroupModel":
-                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.AddContact");
+            case "OnlineAddressBookWinUI.Contact.AddorEditContact.GroupModel":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.AddorEditContact");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "GroupModel", "OnlineAddressBookWinUI.Contact.GroupModel");
-                xamlMember.Getter = get_1_AddContact_GroupModel;
-                xamlMember.Setter = set_1_AddContact_GroupModel;
+                xamlMember.Getter = get_1_AddorEditContact_GroupModel;
+                xamlMember.Setter = set_1_AddorEditContact_GroupModel;
                 break;
             case "Microsoft.UI.Xaml.Controls.ScrollView.Content":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ScrollView");

@@ -15,19 +15,27 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
+        
+        <!--Text Contacts-->
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0">
             <TextBlock Text="Contacts" Margin="0,40" FontSize="30" />
         </StackPanel>
+        
+        <!--To show the top buttons-->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:ConnectionId='9' Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100"                x:Name="logoutBtn" Margin="30,0"></Button>
+            <Button x:ConnectionId='10' Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100"                x:Name="logoutBtn" Margin="30,0"></Button>
             <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35"></TextBox>
-            <ComboBox x:ConnectionId='10' x:Name="viewByGroup" Width="150" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Margin="140,0" PlaceholderText="View By Group"                             >
+            <ComboBox x:ConnectionId='11' x:Name="viewByGroup" Width="150" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Margin="140,0" PlaceholderText="View By Group"                             >
                 <ComboBoxItem />
             </ComboBox>
-            <Button x:ConnectionId='11' Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Width="100"                       x:Name="newBtn"></Button>
+            <Button x:ConnectionId='12' Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Width="100"                       x:Name="newBtn"></Button>
         </StackPanel>
+        
+        <!--scroll view for contacts-->
         <ScrollView Height="600" Grid.Row="2" Margin="70,50">
             <StackPanel>
+                
+                <!--Listview to display contacts-->
                 <ListView x:ConnectionId='2' x:Name="contactList">
                     <ListView.ItemTemplate>
                         <DataTemplate                           >
@@ -44,7 +52,7 @@
                                 <TextBlock x:ConnectionId='6'                         Grid.Column="1" FontSize="15" Margin="3" />
                                 <TextBlock x:ConnectionId='7'                         Grid.Column="2" FontSize="15" Margin="3" />
                                 <TextBlock x:ConnectionId='8'                              Grid.Column="3" FontSize="15" Margin="3" />
-                                <Button Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70" />
+                                <Button x:ConnectionId='9' Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70"                                         />
                                 <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" />
                             </Grid>
                         </DataTemplate>

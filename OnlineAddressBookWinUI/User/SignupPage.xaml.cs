@@ -24,11 +24,13 @@ namespace OnlineAddressBookWinUI.User
         protected string password = "";
         protected int publicKey;
 
+        //constructor to initialize the singup component
         public SignupPage()
         {
             this.InitializeComponent();
         }
 
+        //go back to login page
         public void goBack(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = ((App)Application.Current).RootFrame;

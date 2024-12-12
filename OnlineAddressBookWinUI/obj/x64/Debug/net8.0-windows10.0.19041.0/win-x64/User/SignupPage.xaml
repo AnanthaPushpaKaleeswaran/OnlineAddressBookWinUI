@@ -15,8 +15,10 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <!--go back button-->
         <Button x:ConnectionId='2' x:Name="backBtn" Content="Back" Margin="20,30" Background="#1c5be6" Foreground="White" Width="100" Grid.Row="0"               />
 
+        <!--main stack panel-->
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1">
             <TextBlock Text="Welcome to Online Address Book" Margin="0,80" FontSize="30" Foreground="#763838" />
             <Border BorderBrush="Gray" Height="400" Width="400" Background="#E7E5E5" CornerRadius="20">
@@ -29,20 +31,24 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
+                    <!--Signup Text-->
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="0">
                         <TextBlock Text="Signup" Margin="20" FontSize="30"/>
                     </StackPanel>
 
+                    <!--Email Input-->
                     <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
                         <TextBlock Text="Email" FontSize="15" Margin="5"/>
                         <TextBox x:ConnectionId='6' x:Name="emailInput" Width="300" Margin="5"/>
                     </StackPanel>
 
+                    <!--Password input-->
                     <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
                         <TextBlock Text="Password" FontSize="15" Margin="5"/>
                         <PasswordBox x:ConnectionId='5' x:Name="passwordInput" Width="300" Margin="5"/>
                     </StackPanel>
 
+                    <!--Submit button-->
                     <Button x:ConnectionId='3' HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="3" Margin="0,15" Background="#1B9331" Foreground="White" Width="100"               />
                     <Border HorizontalAlignment="Center" Grid.Row="4">
                         <TextBlock x:ConnectionId='4' x:Name="alert" Foreground="#db0202" TextWrapping="wrap"></TextBlock>

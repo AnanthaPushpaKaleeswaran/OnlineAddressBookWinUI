@@ -31,6 +31,7 @@ namespace OnlineAddressBookWinUI.User
         protected int n;
         protected int privateKey;
         protected int publicKey;
+
         public LoginPage()
         {
             this.InitializeComponent();
@@ -38,34 +39,43 @@ namespace OnlineAddressBookWinUI.User
             passwordInput.Password = "Ananth@123";
         }
 
+        //login function from xaml
         public void Login(object sender,RoutedEventArgs e)
         {
             Dictionary<string, string> user = new Dictionary<string, string>();
             email= emailInput.Text;
             password=passwordInput.Password;
- 
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
+            
+            //check db exist or not
             if (!dbExist(dbPath))
             {
                 alert.Text = "No user exists. Signup to continue";
                 return;
             }
+
             string ConnectionString = $"Data Source={dbPath}";
             SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
             MyConnection.Open();
+            
             if (MyConnection.State.Equals("close"))
             {
                 return;
             }
+
             if (!tableExist(MyConnection, "user"))
             {
                 alert.Text = "No user exists. Signup to continue";
                 return;
             }
             getAllUsers(MyConnection,user);
+            
+            //check user present
             if (user.ContainsKey(email))
             {
                 string dicPassword = user[email];
+                
+                //check password match 
                 if (dicPassword != password)
                 {
                     alert.Text = "Please check your password";
@@ -77,16 +87,21 @@ namespace OnlineAddressBookWinUI.User
                 alert.Text = "No user exists. Please signup to continue";
                 return;
             }
+
             MyConnection.Close();
             alert.Text = "Email and password match";
             Frame rootFrame=((App)Application.Current).RootFrame;
             Frame.Navigate(typeof(Contact.Display),email);
         }
+
+        //go to signup page
         public void GoToSignup(object sender, RoutedEventArgs e)
         {
             Frame rootFrame=((App)Application.Current).RootFrame;
             Frame.Navigate(typeof(SignupPage));
         }
+
+        //db exist function
         protected bool dbExist(string dbName)
         {
             if (File.Exists(dbName))
@@ -95,6 +110,7 @@ namespace OnlineAddressBookWinUI.User
             }
             return false;
         }
+
         protected bool tableExist(SQLiteConnection connection, string tableName)
         {
             string query = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@tableName";
@@ -103,10 +119,13 @@ namespace OnlineAddressBookWinUI.User
             var result = command.ExecuteScalar();
             return Convert.ToInt32(result) > 0;
         }
+
+        //get all the users from db
         protected void getAllUsers(SQLiteConnection MyConnection,Dictionary<string,string> user)
         {
             SetKeys();
             string query = "SELECT * FROM user";
+
             using(SQLiteCommand command=new SQLiteCommand(query, MyConnection))
             {
                 using(SQLiteDataReader reader = command.ExecuteReader())
@@ -118,6 +137,7 @@ namespace OnlineAddressBookWinUI.User
                             string getPass = reader["password"].ToString();
                             string decPass = "";
                             string decPassword = "";
+            
                             foreach (char ch in getPass)
                             {
                                 if (!Char.IsLetter(ch))
@@ -136,15 +156,16 @@ namespace OnlineAddressBookWinUI.User
                 }
             }
         }
+
+        //set the keys
         public void SetKeys()
         {
             int prime1 = 67;
             int prime2 = 61;
-
             n = prime1 * prime2;
             int fi = (prime1 - 1) * (prime2 - 1);
-
             int e = 2;
+
             while (true)
             {
                 if (GCD(e, fi) == 1)
@@ -155,8 +176,8 @@ namespace OnlineAddressBookWinUI.User
             }
 
             publicKey = e;
-
             int d = 2;
+
             while (true)
             {
                 if ((d * e) % fi == 1)
@@ -165,9 +186,10 @@ namespace OnlineAddressBookWinUI.User
                 }
                 d += 1;
             }
-
             privateKey = d;
         }
+
+        //gcd calculation
         public int GCD(int a, int b)
         {
             if (b == 0)
@@ -176,10 +198,13 @@ namespace OnlineAddressBookWinUI.User
             }
             return GCD(b, a % b);
         }
+
+        //decrypt the text
         public  int Decrypt(int encrypted_text)
         {
             int d = privateKey;
             int decrypted = 1;
+
             while (d > 0)
             {
                 decrypted *= encrypted_text;
