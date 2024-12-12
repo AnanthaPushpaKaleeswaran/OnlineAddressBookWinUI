@@ -134,6 +134,7 @@ namespace OnlineAddressBookWinUI.Contact
             await addNewGroupDialog.ShowAsync();
         }
 
+        //go back to display page
         public void Cancel(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = ((App)Application.Current).RootFrame;
@@ -151,41 +152,48 @@ namespace OnlineAddressBookWinUI.Contact
             SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
             MyConnection.Open();
 
+            //check the connection
             if (MyConnection.State.Equals("close"))
             {
                 Console.Error.WriteLine("Error in opening db");
                 return;
             }
 
+            //table exist
             if (!TableExist(MyConnection, "contact"))
             {
                 createContactTable(MyConnection);
             }
 
+            //check the phone number
             if (!ValidPhone())
             {
                 alert.Text = "The phone number must be 10 numbers";
                 return;
             }
 
+            //check the contact exist
             if (ContactExist(MyConnection))
             {
                 alert.Text = "Contact already exists";
                 return;
             }
 
+            //check name exist
             if(NameExist(MyConnection))
             {
                 alert.Text = "Name already exists";
                 return;
             }
 
+            //valid name
             if (!ValidName())
             {
                 alert.Text = "Please enter the valid name";
                 return;
             }
 
+            //valid address
             if (string.IsNullOrWhiteSpace(address))
             {
                 alert.Text = "Please enter the address";
@@ -194,6 +202,7 @@ namespace OnlineAddressBookWinUI.Contact
 
             string groupStr = makeGroupString();
             string query = "INSERT INTO contact VALUES (@name,@phoneNo,@address,@contactGroup,@email)";
+            
             using (SQLiteCommand command = new SQLiteCommand(query,MyConnection))
             {
                 command.Parameters.AddWithValue("@name", name);

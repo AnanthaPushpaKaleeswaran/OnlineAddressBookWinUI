@@ -18,24 +18,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>423155BE3C672E2CCDDF1B3922CCCBD2BF99B3790717212D92B8AAB5A10254A8</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>0fed5a0f-8303-4447-8d8c-564b50d53e88_1.0.6.0_x64__5v3k1te6n09pr</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>5A40F1AE0AE794DEB024EAA58353B21991A419B3E8BFF56E9EC8BEDB160C8F3A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>0fed5a0f-8303-4447-8d8c-564b50d53e88_1.0.7.0_x64__5v3k1te6n09pr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0fed5a0f-8303-4447-8d8c-564b50d53e88_5v3k1te6n09pr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>0fed5a0f-8303-4447-8d8c-564b50d53e88</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=yogar</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.6.0</RegisteredVersion>
+    <RegisteredVersion>1.0.7.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-12T03:57:08.277</Modified>
+      <Modified>2024-12-12T06:09:19.437</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-12T00:49:38.531</Modified>
+      <Modified>2024-12-12T06:09:19.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.runtimeconfig.json">
       <PackagePath>OnlineAddressBookWinUI.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.dll">
       <PackagePath>OnlineAddressBookWinUI.dll</PackagePath>
-      <Modified>2024-12-12T03:57:07.603</Modified>
+      <Modified>2024-12-12T06:09:18.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>OnlineAddressBookWinUI.exe</PackagePath>
-      <Modified>2024-12-12T03:57:07.652</Modified>
+      <Modified>2024-12-12T06:09:18.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -939,7 +939,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.deps.json">
       <PackagePath>OnlineAddressBookWinUI.deps.json</PackagePath>
-      <Modified>2024-12-11T18:17:33.427</Modified>
+      <Modified>2024-12-12T04:18:26.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\syncfusion.core.winui\27.2.5\lib\net8.0-windows10.0\Syncfusion.Core.WinUI.pri">
       <PackagePath>Syncfusion.Core.WinUI.pri</PackagePath>

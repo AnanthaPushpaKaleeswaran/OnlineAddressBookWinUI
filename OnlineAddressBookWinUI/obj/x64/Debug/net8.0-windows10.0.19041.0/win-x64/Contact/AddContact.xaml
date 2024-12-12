@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid>
-
+        <!--Overall panel-->
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border BorderBrush="Gray" Height="Auto" Width="400" Background="#E7E5E5" CornerRadius="20">
                 <Grid>
@@ -59,6 +59,7 @@
                         <Button x:ConnectionId='3' x:Name="submitBtn"  Margin="20,0" Background="#1B9331" Foreground="White" Width="100"                Content="Submit" />
                         <Button x:ConnectionId='4'  x:Name="cancelBtn" Content="Cancel" Margin="20,0" Foreground="Black" Width="100"                />
                     </StackPanel>
+                    
                     <!-- Alert Message -->
                     <TextBlock x:ConnectionId='2' x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
                 </Grid>

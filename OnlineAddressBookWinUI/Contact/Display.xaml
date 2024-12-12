@@ -21,7 +21,9 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="Logout" x:Name="logoutBtn" Margin="30,0"></Button>
             <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35"></TextBox>
-            <Button Content="Sort by group" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Height="35" Width="150" Margin="140,0"></Button>
+            <ComboBox x:Name="viewByGroup" Width="150" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Margin="140,0" PlaceholderText="View By Group" SelectionChanged="ViewGroup">
+                <ComboBoxItem />
+            </ComboBox>
             <Button Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="AddNewContact" x:Name="newBtn"></Button>
         </StackPanel>
         <ScrollView Height="600" Grid.Row="2" Margin="70,50">
@@ -38,10 +40,10 @@
                                     <ColumnDefinition Width="100" />
                                     <ColumnDefinition Width="100" />
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{x:Bind Name}" Grid.Column="0" FontWeight="Bold" FontSize="18" />
-                                <TextBlock Text="{x:Bind PhoneNo}" Grid.Column="1" FontSize="15" Margin="1" />
-                                <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="15" Margin="1" />
-                                <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="15" Margin="1" />
+                                <TextBlock Text="{x:Bind Name}" Grid.Column="0" FontWeight="Bold" FontSize="18" Margin="7,1" />
+                                <TextBlock Text="{x:Bind PhoneNo}" Grid.Column="1" FontSize="15" Margin="3" />
+                                <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="15" Margin="3" />
+                                <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="15" Margin="3" />
                                 <Button Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70" />
                                 <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" />
                             </Grid>

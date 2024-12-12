@@ -226,7 +226,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[43];
+            _typeNameTable = new string[45];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -260,18 +260,20 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeNameTable[30] = "System.Collections.ObjectModel.Collection`1<OnlineAddressBookWinUI.Contact.Contact>";
             _typeNameTable[31] = "OnlineAddressBookWinUI.Contact.Contact";
             _typeNameTable[32] = "String";
-            _typeNameTable[33] = "OnlineAddressBookWinUI.MainWindow";
-            _typeNameTable[34] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[35] = "OnlineAddressBookWinUI.User.LoginPage";
-            _typeNameTable[36] = "OnlineAddressBookWinUI.User.SignupPage";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[39] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[40] = "Int32";
-            _typeNameTable[41] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
-            _typeNameTable[42] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
+            _typeNameTable[33] = "System.Collections.ObjectModel.ObservableCollection`1<String>";
+            _typeNameTable[34] = "System.Collections.ObjectModel.Collection`1<String>";
+            _typeNameTable[35] = "OnlineAddressBookWinUI.MainWindow";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[37] = "OnlineAddressBookWinUI.User.LoginPage";
+            _typeNameTable[38] = "OnlineAddressBookWinUI.User.SignupPage";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[41] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[42] = "Int32";
+            _typeNameTable[43] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
+            _typeNameTable[44] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
 
-            _typeTable = new global::System.Type[43];
+            _typeTable = new global::System.Type[45];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -305,16 +307,18 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             _typeTable[30] = typeof(global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>);
             _typeTable[31] = typeof(global::OnlineAddressBookWinUI.Contact.Contact);
             _typeTable[32] = typeof(global::System.String);
-            _typeTable[33] = typeof(global::OnlineAddressBookWinUI.MainWindow);
-            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[35] = typeof(global::OnlineAddressBookWinUI.User.LoginPage);
-            _typeTable[36] = typeof(global::OnlineAddressBookWinUI.User.SignupPage);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[39] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[40] = typeof(global::System.Int32);
-            _typeTable[41] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
-            _typeTable[42] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
+            _typeTable[33] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>);
+            _typeTable[34] = typeof(global::System.Collections.ObjectModel.Collection<global::System.String>);
+            _typeTable[35] = typeof(global::OnlineAddressBookWinUI.MainWindow);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[37] = typeof(global::OnlineAddressBookWinUI.User.LoginPage);
+            _typeTable[38] = typeof(global::OnlineAddressBookWinUI.User.SignupPage);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[41] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[42] = typeof(global::System.Int32);
+            _typeTable[43] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
+            _typeTable[44] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -358,12 +362,14 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         private object Activate_29_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>(); }
         private object Activate_30_Collection() { return new global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>(); }
         private object Activate_31_Contact() { return new global::OnlineAddressBookWinUI.Contact.Contact(); }
-        private object Activate_33_MainWindow() { return new global::OnlineAddressBookWinUI.MainWindow(); }
-        private object Activate_35_LoginPage() { return new global::OnlineAddressBookWinUI.User.LoginPage(); }
-        private object Activate_36_SignupPage() { return new global::OnlineAddressBookWinUI.User.SignupPage(); }
-        private object Activate_37_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
-        private object Activate_41_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
-        private object Activate_42_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
+        private object Activate_33_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.String>(); }
+        private object Activate_34_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.String>(); }
+        private object Activate_35_MainWindow() { return new global::OnlineAddressBookWinUI.MainWindow(); }
+        private object Activate_37_LoginPage() { return new global::OnlineAddressBookWinUI.User.LoginPage(); }
+        private object Activate_38_SignupPage() { return new global::OnlineAddressBookWinUI.User.SignupPage(); }
+        private object Activate_39_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_43_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
+        private object Activate_44_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_AddContact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.AddContact).TypeHandle);
         private void StaticInitializer_7_GroupModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.GroupModel).TypeHandle);
@@ -385,13 +391,15 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
         private void StaticInitializer_29_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::OnlineAddressBookWinUI.Contact.Contact>).TypeHandle);
         private void StaticInitializer_30_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::OnlineAddressBookWinUI.Contact.Contact>).TypeHandle);
         private void StaticInitializer_31_Contact() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.Contact.Contact).TypeHandle);
-        private void StaticInitializer_33_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.MainWindow).TypeHandle);
-        private void StaticInitializer_35_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.LoginPage).TypeHandle);
-        private void StaticInitializer_36_SignupPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.SignupPage).TypeHandle);
-        private void StaticInitializer_37_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_39_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
-        private void StaticInitializer_41_DoubleToObjectConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter).TypeHandle);
-        private void StaticInitializer_42_DoubleToVisibilityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter).TypeHandle);
+        private void StaticInitializer_33_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.String>).TypeHandle);
+        private void StaticInitializer_34_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::System.String>).TypeHandle);
+        private void StaticInitializer_35_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.MainWindow).TypeHandle);
+        private void StaticInitializer_37_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.LoginPage).TypeHandle);
+        private void StaticInitializer_38_SignupPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::OnlineAddressBookWinUI.User.SignupPage).TypeHandle);
+        private void StaticInitializer_39_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_41_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_43_DoubleToObjectConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter).TypeHandle);
+        private void StaticInitializer_44_DoubleToVisibilityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -411,7 +419,19 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             var newItem = (global::OnlineAddressBookWinUI.Contact.Contact)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_39_IList(object instance, object item)
+        private void VectorAdd_33_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_34_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.String>)instance;
+            var newItem = (global::System.String)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_41_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -655,6 +675,7 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 userType.Activator = Activate_28_Display;
                 userType.StaticInitializer = StaticInitializer_28_Display;
                 userType.AddMemberName("Contacts");
+                userType.AddMemberName("GroupNames");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -691,38 +712,54 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  OnlineAddressBookWinUI.MainWindow
+            case 33:   //  System.Collections.ObjectModel.ObservableCollection`1<String>
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<String>"));
+                userType.StaticInitializer = StaticInitializer_33_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_33_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 34:   //  System.Collections.ObjectModel.Collection`1<String>
+                userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_34_Collection;
+                userType.StaticInitializer = StaticInitializer_34_Collection;
+                userType.CollectionAdd = VectorAdd_34_Collection;
+                xamlType = userType;
+                break;
+
+            case 35:   //  OnlineAddressBookWinUI.MainWindow
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_33_MainWindow;
-                userType.StaticInitializer = StaticInitializer_33_MainWindow;
+                userType.Activator = Activate_35_MainWindow;
+                userType.StaticInitializer = StaticInitializer_35_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 34:   //  Microsoft.UI.Xaml.Window
+            case 36:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  OnlineAddressBookWinUI.User.LoginPage
+            case 37:   //  OnlineAddressBookWinUI.User.LoginPage
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_LoginPage;
-                userType.StaticInitializer = StaticInitializer_35_LoginPage;
+                userType.Activator = Activate_37_LoginPage;
+                userType.StaticInitializer = StaticInitializer_37_LoginPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  OnlineAddressBookWinUI.User.SignupPage
+            case 38:   //  OnlineAddressBookWinUI.User.SignupPage
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_SignupPage;
-                userType.StaticInitializer = StaticInitializer_36_SignupPage;
+                userType.Activator = Activate_38_SignupPage;
+                userType.StaticInitializer = StaticInitializer_38_SignupPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 39:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_37_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_37_TreeViewNode;
+                userType.Activator = Activate_39_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_39_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -734,26 +771,26 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.DependencyObject
+            case 40:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 41:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_39_IList;
-                userType.CollectionAdd = VectorAdd_39_IList;
+                userType.StaticInitializer = StaticInitializer_41_IList;
+                userType.CollectionAdd = VectorAdd_41_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 40:   //  Int32
+            case 42:   //  Int32
                 xamlType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 41:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
+            case 43:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_41_DoubleToObjectConverter;
-                userType.StaticInitializer = StaticInitializer_41_DoubleToObjectConverter;
+                userType.Activator = Activate_43_DoubleToObjectConverter;
+                userType.StaticInitializer = StaticInitializer_43_DoubleToObjectConverter;
                 userType.AddMemberName("TrueValue");
                 userType.AddMemberName("FalseValue");
                 userType.AddMemberName("NullValue");
@@ -763,10 +800,10 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
+            case 44:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
                 userType = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter"));
-                userType.Activator = Activate_42_DoubleToVisibilityConverter;
-                userType.StaticInitializer = StaticInitializer_42_DoubleToVisibilityConverter;
+                userType.Activator = Activate_44_DoubleToVisibilityConverter;
+                userType.StaticInitializer = StaticInitializer_44_DoubleToVisibilityConverter;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
@@ -1168,102 +1205,112 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
             var that = (global::OnlineAddressBookWinUI.Contact.Contact)instance;
             that.ContactGroup = (global::System.String)Value;
         }
-        private object get_42_TreeViewNode_Children(object instance)
+        private object get_42_Display_GroupNames(object instance)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Display)instance;
+            return that.GroupNames;
+        }
+        private void set_42_Display_GroupNames(object instance, object Value)
+        {
+            var that = (global::OnlineAddressBookWinUI.Contact.Display)instance;
+            that.GroupNames = (global::System.Collections.ObjectModel.ObservableCollection<global::System.String>)Value;
+        }
+        private object get_43_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_43_TreeViewNode_Content(object instance)
+        private object get_44_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_43_TreeViewNode_Content(object instance, object Value)
+        private void set_44_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_44_TreeViewNode_Depth(object instance)
+        private object get_45_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_45_TreeViewNode_HasChildren(object instance)
+        private object get_46_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_46_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_47_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_46_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_47_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_47_TreeViewNode_IsExpanded(object instance)
+        private object get_48_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_47_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_48_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_48_TreeViewNode_Parent(object instance)
+        private object get_49_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
         }
-        private object get_49_DoubleToObjectConverter_TrueValue(object instance)
+        private object get_50_DoubleToObjectConverter_TrueValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.TrueValue;
         }
-        private void set_49_DoubleToObjectConverter_TrueValue(object instance, object Value)
+        private void set_50_DoubleToObjectConverter_TrueValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.TrueValue = (global::System.Object)Value;
         }
-        private object get_50_DoubleToObjectConverter_FalseValue(object instance)
+        private object get_51_DoubleToObjectConverter_FalseValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.FalseValue;
         }
-        private void set_50_DoubleToObjectConverter_FalseValue(object instance, object Value)
+        private void set_51_DoubleToObjectConverter_FalseValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.FalseValue = (global::System.Object)Value;
         }
-        private object get_51_DoubleToObjectConverter_NullValue(object instance)
+        private object get_52_DoubleToObjectConverter_NullValue(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.NullValue;
         }
-        private void set_51_DoubleToObjectConverter_NullValue(object instance, object Value)
+        private void set_52_DoubleToObjectConverter_NullValue(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.NullValue = (global::System.Object)Value;
         }
-        private object get_52_DoubleToObjectConverter_GreaterThan(object instance)
+        private object get_53_DoubleToObjectConverter_GreaterThan(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.GreaterThan;
         }
-        private void set_52_DoubleToObjectConverter_GreaterThan(object instance, object Value)
+        private void set_53_DoubleToObjectConverter_GreaterThan(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.GreaterThan = (global::System.Double)Value;
         }
-        private object get_53_DoubleToObjectConverter_LessThan(object instance)
+        private object get_54_DoubleToObjectConverter_LessThan(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             return that.LessThan;
         }
-        private void set_53_DoubleToObjectConverter_LessThan(object instance, object Value)
+        private void set_54_DoubleToObjectConverter_LessThan(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter)instance;
             that.LessThan = (global::System.Double)Value;
@@ -1552,86 +1599,92 @@ namespace OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo
                 xamlMember.Getter = get_41_Contact_ContactGroup;
                 xamlMember.Setter = set_41_Contact_ContactGroup;
                 break;
+            case "OnlineAddressBookWinUI.Contact.Display.GroupNames":
+                userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OnlineAddressBookWinUI.Contact.Display");
+                xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "GroupNames", "System.Collections.ObjectModel.ObservableCollection`1<String>");
+                xamlMember.Getter = get_42_Display_GroupNames;
+                xamlMember.Setter = set_42_Display_GroupNames;
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_42_TreeViewNode_Children;
+                xamlMember.Getter = get_43_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_43_TreeViewNode_Content;
-                xamlMember.Setter = set_43_TreeViewNode_Content;
+                xamlMember.Getter = get_44_TreeViewNode_Content;
+                xamlMember.Setter = set_44_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_TreeViewNode_Depth;
+                xamlMember.Getter = get_45_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_46_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_46_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_46_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_47_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_47_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_47_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_48_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_48_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_48_TreeViewNode_Parent;
+                xamlMember.Getter = get_49_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.TrueValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "TrueValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_DoubleToObjectConverter_TrueValue;
-                xamlMember.Setter = set_49_DoubleToObjectConverter_TrueValue;
+                xamlMember.Getter = get_50_DoubleToObjectConverter_TrueValue;
+                xamlMember.Setter = set_50_DoubleToObjectConverter_TrueValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.FalseValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "FalseValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_DoubleToObjectConverter_FalseValue;
-                xamlMember.Setter = set_50_DoubleToObjectConverter_FalseValue;
+                xamlMember.Getter = get_51_DoubleToObjectConverter_FalseValue;
+                xamlMember.Setter = set_51_DoubleToObjectConverter_FalseValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.NullValue":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "NullValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_DoubleToObjectConverter_NullValue;
-                xamlMember.Setter = set_51_DoubleToObjectConverter_NullValue;
+                xamlMember.Getter = get_52_DoubleToObjectConverter_NullValue;
+                xamlMember.Setter = set_52_DoubleToObjectConverter_NullValue;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.GreaterThan":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "GreaterThan", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_DoubleToObjectConverter_GreaterThan;
-                xamlMember.Setter = set_52_DoubleToObjectConverter_GreaterThan;
+                xamlMember.Getter = get_53_DoubleToObjectConverter_GreaterThan;
+                xamlMember.Setter = set_53_DoubleToObjectConverter_GreaterThan;
                 break;
             case "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter.LessThan":
                 userType = (global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter");
                 xamlMember = new global::OnlineAddressBookWinUI.OnlineAddressBookWinUI_XamlTypeInfo.XamlMember(this, "LessThan", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_DoubleToObjectConverter_LessThan;
-                xamlMember.Setter = set_53_DoubleToObjectConverter_LessThan;
+                xamlMember.Getter = get_54_DoubleToObjectConverter_LessThan;
+                xamlMember.Setter = set_54_DoubleToObjectConverter_LessThan;
                 break;
             }
             return xamlMember;

@@ -12,6 +12,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.X509Certificates;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -27,6 +28,7 @@ namespace OnlineAddressBookWinUI.Contact
     {
         public string email = "";
         public ObservableCollection<Contact> Contacts { get; set; }
+        public ObservableCollection<string> GroupNames { get; set; }
         public Display()
         {
             this.InitializeComponent();
@@ -45,6 +47,7 @@ namespace OnlineAddressBookWinUI.Contact
                 email = message; 
             }
             LoadContacts();
+            LoadGroupsFromDB();
         }
 
         private void LoadContacts()
@@ -112,6 +115,122 @@ namespace OnlineAddressBookWinUI.Contact
             var result = command.ExecuteScalar();
             return Convert.ToInt32(result) > 0;
         }
+
+        public void ViewGroup(Object sender, RoutedEventArgs e)
+        {
+            if(viewByGroup.SelectedItem is string selectedGroup)
+            {
+                if(selectedGroup=="No Group")
+                {
+                    selectedGroup = "";
+                }
+                LoadViewContacts(selectedGroup);
+            }
+        }
+
+        private void LoadViewContacts(string selectedGroup)
+        {
+            Contacts = LoadContactsFromDB();
+            ObservableCollection<Contact> groupContacts= new ObservableCollection<Contact>();
+            foreach (Contact contact in Contacts)
+            {
+                string groupName = contact.ContactGroup;
+                string tempGroup = "";
+                foreach(char ch in groupName)
+                {
+                    if (ch == ',')
+                    {
+                        if (tempGroup == selectedGroup)
+                        {
+                            groupContacts.Add(contact);
+                            tempGroup = "";
+                            break;
+                        }
+                        tempGroup = "";
+                    }
+                    else
+                    {
+                        tempGroup += ch;
+                    }
+                }
+                if (tempGroup == selectedGroup && !string.IsNullOrWhiteSpace(tempGroup))
+                {
+                    groupContacts.Add(contact);
+                }
+            }
+            if (selectedGroup != "Show All")
+            {
+                contactList.ItemsSource = groupContacts;
+            }
+            else
+            {
+                contactList.ItemsSource = Contacts;
+            }
+        }
+
+        
+        protected void LoadGroupsFromDB()
+        {
+            ObservableCollection<string> groups = new ObservableCollection<string>();
+            groups.Add("Show All");
+            HashSet<string> groupSet = new HashSet<string>();
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
+            string connectionString = $"Data Source={dbPath}";
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                if (connection.State.Equals("Close"))
+                {
+                    Console.Error.WriteLine("Error in opening db");
+                    return;
+                }
+
+                if (!TableExist(connection, "contact"))
+                {
+                    return;
+                }
+
+                string query = "SELECT contactGroup FROM contact WHERE email=@email";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@email", email);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string indGroup = reader["contactGroup"].ToString();
+                                string tempGroup = "";
+                                foreach (char ch in indGroup)
+                                {
+                                    if (ch == ',')
+                                    {
+                                        groupSet.Add(tempGroup);
+                                        tempGroup = "";
+                                    }
+                                    else
+                                    {
+                                        tempGroup += ch;
+                                    }
+                                }
+                                if (!string.IsNullOrWhiteSpace(tempGroup))
+                                {
+                                    groupSet.Add(tempGroup);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            foreach (string group in groupSet)
+            {
+                groups.Add(group);
+            }
+            groups.Add("No Group");
+            viewByGroup.ItemsSource = groups;
+        }
+
     }
 
     public class Contact
