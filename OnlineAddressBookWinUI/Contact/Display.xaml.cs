@@ -8,11 +8,13 @@ using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -268,6 +270,97 @@ namespace OnlineAddressBookWinUI.Contact
             send.Contact = contact;
             Frame rootFrame = ((App)Application.Current).RootFrame;
             Frame.Navigate(typeof(AddorEditContact), send);
+        }
+
+        public void DeleteContactClick(object sender,RoutedEventArgs args)
+        {
+            var button=sender as Button;
+            Contact contact=button?.Tag as Contact;
+            Contacts.Remove(contact);
+            DeleteModal(contact);
+            contactList.ItemsSource = null;
+            contactList.ItemsSource = Contacts;
+        }
+
+        private void DeleteModal(Contact contact)
+        {
+            ContentDialog deleteDialog = new ContentDialog
+            {
+                Title="Delete",
+                PrimaryButtonText="Yes",
+                SecondaryButtonText="No",
+                DefaultButton = ContentDialogButton.Primary,
+                Content="Are you sure you want to delete this contact?"
+            };
+
+            deleteDialog.XamlRoot = this.XamlRoot;
+            deleteDialog.PrimaryButtonClick += (sender, args) =>
+            {
+                deleteDialog.Hide();
+                DeleteContact(contact);
+            };
+            deleteDialog.ShowAsync();
+        }
+
+        private void DeleteContact(Contact contact)
+        {
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
+            string connectionString = $"Data Source={dbPath}";
+
+            using (SQLiteConnection myConnection = new SQLiteConnection(connectionString))
+            {
+                myConnection.Open();
+
+                if (myConnection.State == ConnectionState.Closed)
+                {
+                    Console.Error.WriteLine("Error in opening db");
+                    return;
+                }
+
+                if (!TableExist(myConnection, "contact"))
+                {
+                    return;
+                }
+
+                string query = "DELETE FROM contact WHERE email=@email AND phoneNo=@phoneNo";
+                using (SQLiteCommand command = new SQLiteCommand(query, myConnection))
+                {
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@phoneNo", contact.PhoneNo);
+                    var rowsAffected = command.ExecuteNonQuery();
+                    showDeleteDialog();
+                }
+            }
+        }
+
+        private async void showDeleteDialog()
+        {
+            // Create a ContentDialog
+            ContentDialog addNewGroupDialog = new ContentDialog
+            {
+                Title = "Delete",
+                PrimaryButtonText = string.Empty, // Hide primary button
+                CloseButtonText = string.Empty   // Hide close button
+            };
+
+            // Add content to the dialog
+            TextBlock textBlock = new TextBlock
+            {
+                Text = "Contact deleted successfully",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontSize = 16,
+            };
+            addNewGroupDialog.Content = textBlock;
+            addNewGroupDialog.XamlRoot = this.XamlRoot;
+            // Show the dialog
+            _ = addNewGroupDialog.ShowAsync();
+
+            // Wait for 1 second
+            await Task.Delay(1000);
+
+            // Close the dialog
+            addNewGroupDialog.Hide();
         }
     }
 

@@ -53,7 +53,7 @@
                                 <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="15" Margin="3" />
                                 <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="15" Margin="3" />
                                 <Button Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70" Click="EditContactClick" Tag="{x:Bind}" />
-                                <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" />
+                                <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" Click="DeleteContactClick" Tag="{x:Bind}" />
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>

@@ -213,21 +213,20 @@ namespace OnlineAddressBookWinUI.Contact
                 alert.Text = "Please enter the address";
                 return;
             }
-
             string groupStr = makeGroupString();
 
             if (type == "add")
             {
                 AddContact addContact = new AddContact();
                 addContact.AddContactToDB(MyConnection, name, phoneNo, address, groupStr, email);
-                ShowAutoEditClosingDialog();
+                ShowAutoAddClosingDialog();
             }
 
             if (type == "edit")
             {
                 EditContact editContact = new EditContact();
                 editContact.editContactDB(MyConnection, name, phoneNo, address, groupStr, email, oldPhoneNo);
-                ShowAutoAddClosingDialog();
+                ShowAutoEditClosingDialog();
             }
 
             Frame rootFrame = ((App)Application.Current).RootFrame;
