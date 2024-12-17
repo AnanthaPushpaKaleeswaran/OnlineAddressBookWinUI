@@ -2,5 +2,6 @@ App.xbf
 Contact\AddorEditContact.xbf
 Contact\Display.xbf
 MainWindow.xbf
+Style.xbf
 User\LoginPage.xbf
 User\SignupPage.xbf

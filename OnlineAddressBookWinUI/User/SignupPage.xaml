@@ -7,21 +7,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-   
+    Background="#5789f7">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <!--go back button-->
-        <Button x:Name="backBtn" Content="Back" Margin="20,30" Background="#1c5be6" Foreground="White" Width="100" Grid.Row="0" Click="goBack"/>
-
         <!--main stack panel-->
-        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1">
-            <TextBlock Text="Welcome to Online Address Book" Margin="0,80" FontSize="30" Foreground="#763838" />
-            <Border BorderBrush="Gray" Height="400" Width="400" Background="#E7E5E5" CornerRadius="20">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="1">
+            <TextBlock Text="Welcome to Online Address Book" Margin="0,80" FontSize="30" Foreground="White" TextWrapping="Wrap"/>
+            <Border BorderBrush="Gray" Height="480" Background="White" CornerRadius="20" MaxWidth="400" MinWidth="10" MinHeight="10" MaxHeight="480">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -33,28 +31,56 @@
 
                     <!--Signup Text-->
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="0">
-                        <TextBlock Text="Signup" Margin="20" FontSize="30"/>
+                        <TextBlock Text="Signup" Margin="20" FontSize="30" Foreground="#5789f7"/>
                     </StackPanel>
 
                     <!--Email Input-->
-                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
-                        <TextBlock Text="Email" FontSize="15" Margin="5"/>
-                        <TextBox x:Name="emailInput" Width="300" Margin="5"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="35,10">
+                        <TextBlock Text="Email" FontSize="15" Margin="5" Foreground="Black"/>
+                        <TextBox x:Name="emailInput" Margin="5"/>
+                        <TextBlock x:Name="emailAlert" Foreground="#a60707" TextWrapping="wrap" Margin="5" />
                     </StackPanel>
 
                     <!--Password input-->
-                    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
-                        <TextBlock Text="Password" FontSize="15" Margin="5"/>
-                        <PasswordBox x:Name="passwordInput" Width="300" Margin="5"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="35,10,35,0">
+                        <TextBlock Text="Password" FontSize="15" Margin="5" Foreground="Black"/>
+                        <PasswordBox x:Name="passwordInput" Margin="5"/>
+                        <TextBlock x:Name="passwordAlert" Margin="5" Foreground="#a60707" TextWrapping="wrap" Height="80"/>
                     </StackPanel>
 
-                    <!--Submit button-->
-                    <Button HorizontalAlignment="Center" x:Name="submitBtn" Content="Submit" Grid.Row="3" Margin="0,15" Background="#1B9331" Foreground="White" Width="100" Click="Signup"/>
-                    <Border HorizontalAlignment="Center" Grid.Row="4">
-                        <TextBlock x:Name="alert" Foreground="#db0202" TextWrapping="wrap"></TextBlock>
-                    </Border>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+                        <!--Submit button-->
+                        <Button Name="submitBtn" Content="Submit" Background="#35772C" Click="Signup" Margin="30,0" Style="{StaticResource LoginButtonsStyle}" BorderBrush="#35772C">
+                            <Button.Resources>
+                                <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SubmitButtonBackgroundPointerOver" />
+                                <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SubmitButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SubmitButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SubmitButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="SubmitButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="SubmitButtonForeground" />
+                            </Button.Resources>
+                        </Button>
+
+                        <Button Content="Login" Background="#6e98f5" Click="goBack" Margin="30,10" Style="{StaticResource LoginButtonsStyle}" BorderBrush="#6e98f5">
+                            <Button.Resources>
+                                <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="BlueButtonBackgroundPointerOver" />
+                                <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="BlueButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="BlueButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="BlueButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="BlueButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="BlueButtonForeground" />
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+
+                    <TextBlock x:Name="alert" Foreground="#a60707" TextWrapping="wrap" Grid.Row="4" HorizontalAlignment="Center" Margin="0,20"></TextBlock>
                 </Grid>
             </Border>
         </StackPanel>
+        <TextBlock Name="version" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20" Grid.Row="2" Text="Version - " Foreground="White"></TextBlock>
     </Grid>
 </Page>

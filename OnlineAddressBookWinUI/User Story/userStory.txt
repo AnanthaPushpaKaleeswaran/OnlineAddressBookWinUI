@@ -47,8 +47,10 @@
 	Search the contacts from db through name
 	Check listing is correct
 
-108. Testing the application
+109. UI Enhancement
+
+110. Testing the application
 	Identifying corner cases and test it
 	Bug solving
 
-109. Deploying the application
+111. Deploying the application

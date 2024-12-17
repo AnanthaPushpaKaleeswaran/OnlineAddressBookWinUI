@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Data.SQLite;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System.Data.SQLite;
 
 namespace OnlineAddressBookWinUI.Contact
 {
     internal class AddContact
     {
-        public void AddContactToDB(SQLiteConnection MyConnection,string name,string phoneNo,string address,string groupStr,string email)
+        public void AddContactToDB(SQLiteConnection MyConnection, string name, string phoneNo, string address, string groupStr, string email)
         {
             string query = "INSERT INTO contact VALUES (@name,@phoneNo,@address,@contactGroup,@email)";
 

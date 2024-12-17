@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>0fed5a0f-8303-4447-8d8c-564b50d53e88</PackageIdentityName>
     <PackageIdentityPublisher>CN=yogar</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
+    <LayoutDir>E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>C5056697218C3EF922E1C5D872A3FDF433D76FA214C6D26769BFD42DB58F0F8C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>0fed5a0f-8303-4447-8d8c-564b50d53e88_1.0.8.0_x64__5v3k1te6n09pr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>0fed5a0f-8303-4447-8d8c-564b50d53e88_5v3k1te6n09pr!App</RegisteredUserModeAppID>
@@ -26,28 +26,28 @@
     <RegisteredVersion>1.0.8.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
+    <AppXManifest Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-12T15:35:07.393</Modified>
+      <Modified>2024-12-17T06:51:54.614</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-12T15:15:43.371</Modified>
+      <Modified>2024-12-17T06:49:26.859</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.runtimeconfig.json">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.runtimeconfig.json">
       <PackagePath>OnlineAddressBookWinUI.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-11T10:40:50.627</Modified>
+      <Modified>2024-12-17T06:39:59.790</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.dll">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.dll">
       <PackagePath>OnlineAddressBookWinUI.dll</PackagePath>
-      <Modified>2024-12-12T15:35:07.039</Modified>
+      <Modified>2024-12-17T06:51:54.257</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>OnlineAddressBookWinUI.exe</PackagePath>
-      <Modified>2024-12-12T15:35:07.050</Modified>
+      <Modified>2024-12-17T06:51:54.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -797,6 +797,14 @@
       <PackagePath>EntityFramework.dll</PackagePath>
       <Modified>2020-04-16T20:38:44.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
+      <Modified>2023-10-31T14:59:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+      <Modified>2023-10-31T14:58:56.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\microsoft.win32.systemevents\4.7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll">
       <PackagePath>Microsoft.Win32.SystemEvents.dll</PackagePath>
       <Modified>2019-11-15T08:54:18.000</Modified>
@@ -865,6 +873,18 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2024-11-06T06:16:48.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\nservicebus\9.0.0\lib\net8.0\NServiceBus.Core.dll">
+      <PackagePath>NServiceBus.Core.dll</PackagePath>
+      <Modified>2024-02-06T23:11:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\nservicebus.messageinterfaces\1.0.0\lib\netstandard2.0\NServiceBus.MessageInterfaces.dll">
+      <PackagePath>NServiceBus.MessageInterfaces.dll</PackagePath>
+      <Modified>2024-02-06T20:25:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\nservicebus.testing\9.0.0\lib\net8.0\NServiceBus.Testing.dll">
+      <PackagePath>NServiceBus.Testing.dll</PackagePath>
+      <Modified>2024-02-08T21:19:54.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.119\lib\netstandard2.1\System.Data.SQLite.dll">
       <PackagePath>System.Data.SQLite.dll</PackagePath>
       <Modified>2024-09-28T19:23:48.000</Modified>
@@ -901,9 +921,17 @@
       <PackagePath>System.Drawing.Common.dll</PackagePath>
       <Modified>2019-11-15T08:54:20.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.cryptography.pkcs\8.0.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll">
+      <PackagePath>System.Security.Cryptography.Pkcs.dll</PackagePath>
+      <Modified>2023-10-31T15:00:12.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.cryptography.protecteddata\4.7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
       <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
       <Modified>2019-11-15T08:53:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.cryptography.xml\8.0.0\lib\net8.0\System.Security.Cryptography.Xml.dll">
+      <PackagePath>System.Security.Cryptography.Xml.dll</PackagePath>
+      <Modified>2023-10-31T14:59:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\system.security.permissions\4.7.0\lib\netcoreapp3.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
@@ -937,9 +965,9 @@
       <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
       <Modified>2024-07-20T08:33:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.deps.json">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\OnlineAddressBookWinUI.deps.json">
       <PackagePath>OnlineAddressBookWinUI.deps.json</PackagePath>
-      <Modified>2024-12-12T09:06:11.737</Modified>
+      <Modified>2024-12-17T06:49:26.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yogar\.nuget\packages\syncfusion.core.winui\27.2.5\lib\net8.0-windows10.0\Syncfusion.Core.WinUI.pri">
       <PackagePath>Syncfusion.Core.WinUI.pri</PackagePath>
@@ -949,33 +977,37 @@
       <PackagePath>Syncfusion.Editors.WinUI.pri</PackagePath>
       <Modified>2024-12-02T07:53:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\contact.ico">
+      <PackagePath>Assets\contact.ico</PackagePath>
+      <Modified>2024-12-16T08:42:23.717</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.924</Modified>
+      <Modified>2024-12-17T06:15:06.093</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.928</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.928</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.928</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.931</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.932</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Ananth\repos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Ananth\tempRepos\OnlineAddressBookWinUI\OnlineAddressBookWinUI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2024-12-05T09:00:28.932</Modified>
+      <Modified>2024-12-17T06:15:06.094</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

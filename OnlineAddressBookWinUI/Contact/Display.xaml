@@ -7,58 +7,135 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#6e98f5">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        
+
         <!--Text Contacts-->
-        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="0">
-            <TextBlock Text="Contacts" Margin="0,40" FontSize="30" />
-        </StackPanel>
-        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Contacts" Margin="0,40" FontSize="30" HorizontalAlignment="Center" Grid.Column="0" Foreground="White"/>
+            <Button Content="Logout" CornerRadius="4" Background="#a60707" Foreground="White" BorderThickness="0" Height="35" Click="LogoutModal" x:Name="logoutBtn" Grid.Column="1" Margin="0,0,10,0" BorderBrush="#a60707">
+                <Button.Resources>
+                    <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="CancelButtonBackgroundPointerOver" />
+                    <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="CancelButtonForeground" />
+
+                    <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="CancelButtonBackground" />
+                    <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="CancelButtonForeground" />
+
+                    <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="CancelButtonBackground" />
+                    <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="CancelButtonForeground" />
+                </Button.Resources>
+            </Button>
+        </Grid>
+
         <!--To show the top buttons-->
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button Content="Logout" CornerRadius="0" Background="#db0202" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="Logout" x:Name="logoutBtn" Margin="30,0"></Button>
-            <TextBox Width="700" Background="#F1EEEE" BorderThickness="1" BorderBrush="DarkGray" Margin="30,0" CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="#888585" FontSize="15" Height="35" TextChanged="SearchContacts" Name="searchInput" />
-            <ComboBox x:Name="viewByGroup" Width="150" CornerRadius="0" Background="#F1EEEE" Foreground="#888585" BorderThickness="1" BorderBrush="DarkGray" Margin="140,0" PlaceholderText="View By Group" SelectionChanged="ViewGroup">
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition MaxWidth="300" MinWidth="100"/>
+                <ColumnDefinition MaxWidth="200" MinWidth="100"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox CornerRadius="0" PlaceholderText="Search Contacts" PlaceholderForeground="Black" Height="35" Margin="90,0,0,0" TextChanged="SearchContacts" Name="searchInput" Grid.Column="0"/>
+            
+            <ComboBox x:Name="viewByGroup" CornerRadius="0" Background="White" Foreground="Black" BorderThickness="1" BorderBrush="#6e98f5" PlaceholderText="View By Group" PlaceholderForeground="Black" SelectionChanged="ViewGroup" Grid.Column="1" Margin="60,0" Padding="20,8">
                 <ComboBoxItem />
             </ComboBox>
-            <Button Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Width="100" Click="AddNewContact" x:Name="newBtn"></Button>
-        </StackPanel>
-        
+
+            <Button Content="New" CornerRadius="0" Background="#35772C" Foreground="White" BorderThickness="0"  Height="35" Padding="30,0" Click="AddNewContact" x:Name="newBtn" Grid.Column="2" Margin="0,0,90,0" BorderBrush="#35772C">
+            
+                <Button.Resources>
+                    <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SubmitButtonBackgroundPointerOver" />
+                    <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SubmitButtonForeground" />
+
+                    <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SubmitButtonBackground" />
+                    <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SubmitButtonForeground" />
+
+                    <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="SubmitButtonBackground" />
+                    <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="SubmitButtonForeground" />
+                </Button.Resources>
+            </Button>
+        </Grid>
+
         <!--scroll view for contacts-->
-        <ScrollView Height="600" Grid.Row="2" Margin="70,50">
+        <ScrollView Height="600" Grid.Row="2" Margin="70,50" Foreground="White">
             <StackPanel>
-                
+                <Grid Margin="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="340" MinWidth="10"/>
+                        <ColumnDefinition MaxWidth="170" MinWidth="10"/>
+                        <ColumnDefinition MaxWidth="360" MinWidth="10"/>
+                        <ColumnDefinition MaxWidth="300" MinWidth="10"/>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Name" Grid.Column="0" FontWeight="Bold" FontSize="18" Margin="7,1" TextWrapping="Wrap"/>
+                    <TextBlock Text="Phone Number" Grid.Column="1" FontSize="18" Margin="3" FontWeight="Bold" TextWrapping="Wrap"/>
+                    <TextBlock Text="Address" FontWeight="Bold" Grid.Column="2" FontSize="18" Margin="3" TextWrapping="Wrap"/>
+                    <TextBlock Text="Group" FontWeight="Bold" Grid.Column="3" FontSize="18" Margin="3" TextWrapping="Wrap"/>
+                </Grid>
                 <!--Listview to display contacts-->
                 <ListView x:Name="contactList">
+                    
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="local:Contact">
-                            <Grid Margin="5" Background="#E7E5E5" Padding="5">
+                            <Grid Margin="5" Padding="5">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="340" />
-                                    <ColumnDefinition Width="130" />
-                                    <ColumnDefinition Width="400" />
-                                    <ColumnDefinition Width="300" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition MaxWidth="340" MinWidth="10"/>
+                                    <ColumnDefinition MaxWidth="170" MinWidth="10"/>
+                                    <ColumnDefinition MaxWidth="360" MinWidth="10"/>
+                                    <ColumnDefinition MaxWidth="300" MinWidth="10"/>
+                                    <ColumnDefinition MaxWidth="100" MinWidth="10"/>
+                                    <ColumnDefinition MaxWidth="100" MinWidth="10"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{x:Bind Name}" Grid.Column="0" FontWeight="Bold" FontSize="18" Margin="7,1" />
-                                <TextBlock Text="{x:Bind PhoneNo}" Grid.Column="1" FontSize="15" Margin="3" />
-                                <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="15" Margin="3" />
-                                <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="15" Margin="3" />
-                                <Button Grid.Column="4" Content="Edit" Background="#1c5be6" Foreground="White" Width="70" Click="EditContactClick" Tag="{x:Bind}" />
-                                <Button Grid.Column="5" Content="Delete" Background="#db0202" Foreground="White" Click="DeleteContactClick" Tag="{x:Bind}" />
+                                <TextBlock Text="{x:Bind Name}" Grid.Column="0" FontWeight="Bold" FontSize="18" Margin="7,1" Foreground="White" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind PhoneNo}" Grid.Column="1" FontSize="18" Margin="3" Foreground="White" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Address}" Grid.Column="2" FontSize="18" Margin="3" Foreground="White" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind ContactGroup}" Grid.Column="3" FontSize="18" Margin="3" Foreground="White" TextWrapping="Wrap"/>
+
+                                <Button Grid.Column="4" Content="Edit" Background="#35772C" Foreground="White" Width="70" Click="EditContactClick" Tag="{x:Bind}" BorderBrush="#35772C">
+                                    <Button.Resources>
+                                        <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SubmitButtonBackgroundPointerOver" />
+                                        <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SubmitButtonForeground" />
+
+                                        <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SubmitButtonBackground" />
+                                        <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SubmitButtonForeground" />
+
+                                        <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="SubmitButtonBackground" />
+                                        <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="SubmitButtonForeground" />
+                                    </Button.Resources>
+                                </Button>
+
+                                <Button Grid.Column="5" Content="Delete" Background="#a60707" Foreground="White" Click="DeleteContactClick" Tag="{x:Bind}" Padding="15,5" BorderBrush="#a60707">
+                                    <Button.Resources>
+                                        <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="CancelButtonBackgroundPointerOver" />
+                                        <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="CancelButtonForeground" />
+
+                                        <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="CancelButtonBackground" />
+                                        <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="CancelButtonForeground" />
+
+                                        <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="CancelButtonBackground" />
+                                        <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="CancelButtonForeground" />
+                                    </Button.Resources>
+                                </Button>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackPanel>
         </ScrollView>
+        
+        <TextBlock Name="version" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20" Grid.Row="3" Text="Version - " Foreground="White"></TextBlock>
     </Grid>
 </Page>

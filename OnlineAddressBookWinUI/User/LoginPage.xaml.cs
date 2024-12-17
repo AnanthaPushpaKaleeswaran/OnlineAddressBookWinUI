@@ -1,20 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
 using System.Data.SQLite;
-using System.Data.Common;
-using System.Security.Cryptography.X509Certificates;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,27 +26,27 @@ namespace OnlineAddressBookWinUI.User
             this.InitializeComponent();
             emailInput.Text = "ananth@gmail.com";
             passwordInput.Password = "Ananth@123";
+            version.Text += new Version().GetAppVersion();
         }
 
         //login function from xaml
-        public void Login(object sender,RoutedEventArgs e)
+        public void Login(object sender, RoutedEventArgs e)
         {
             Dictionary<string, string> user = new Dictionary<string, string>();
-            email= emailInput.Text;
-            password=passwordInput.Password;
+            email = emailInput.Text;
+            password = passwordInput.Password;
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
-            
+
             //check db exist or not
             if (!dbExist(dbPath))
             {
-                alert.Text = "No user exists. Signup to continue";
                 return;
             }
 
             string ConnectionString = $"Data Source={dbPath}";
             SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
             MyConnection.Open();
-            
+
             if (MyConnection.State.Equals("close"))
             {
                 return;
@@ -65,39 +54,38 @@ namespace OnlineAddressBookWinUI.User
 
             if (!tableExist(MyConnection, "user"))
             {
-                alert.Text = "No user exists. Signup to continue";
                 return;
             }
-            getAllUsers(MyConnection,user);
-            
+            getAllUsers(MyConnection, user);
+
             //check user present
             if (user.ContainsKey(email))
             {
                 string dicPassword = user[email];
-                
+
                 //check password match 
                 if (dicPassword != password)
                 {
-                    alert.Text = "Please check your password";
+                    passwordAlert.Text = "Please check your password";
                     return;
                 }
             }
             else
             {
+                passwordAlert.Text = "";
                 alert.Text = "No user exists. Please signup to continue";
                 return;
             }
 
             MyConnection.Close();
-            alert.Text = "Email and password match";
-            Frame rootFrame=((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(Contact.Display),email);
+            Frame rootFrame = ((App)Application.Current).RootFrame;
+            Frame.Navigate(typeof(Contact.Display), email);
         }
 
         //go to signup page
         public void GoToSignup(object sender, RoutedEventArgs e)
         {
-            Frame rootFrame=((App)Application.Current).RootFrame;
+            Frame rootFrame = ((App)Application.Current).RootFrame;
             Frame.Navigate(typeof(SignupPage));
         }
 
@@ -121,23 +109,23 @@ namespace OnlineAddressBookWinUI.User
         }
 
         //get all the users from db
-        protected void getAllUsers(SQLiteConnection MyConnection,Dictionary<string,string> user)
+        protected void getAllUsers(SQLiteConnection MyConnection, Dictionary<string, string> user)
         {
             SetKeys();
             string query = "SELECT * FROM user";
 
-            using(SQLiteCommand command=new SQLiteCommand(query, MyConnection))
+            using (SQLiteCommand command = new SQLiteCommand(query, MyConnection))
             {
-                using(SQLiteDataReader reader = command.ExecuteReader())
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    if(reader.HasRows)
+                    if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
                             string getPass = reader["password"].ToString();
                             string decPass = "";
                             string decPassword = "";
-            
+
                             foreach (char ch in getPass)
                             {
                                 if (!Char.IsLetter(ch))
@@ -200,7 +188,7 @@ namespace OnlineAddressBookWinUI.User
         }
 
         //decrypt the text
-        public  int Decrypt(int encrypted_text)
+        public int Decrypt(int encrypted_text)
         {
             int d = privateKey;
             int decrypted = 1;
@@ -213,5 +201,6 @@ namespace OnlineAddressBookWinUI.User
             }
             return decrypted;
         }
+
     }
 }

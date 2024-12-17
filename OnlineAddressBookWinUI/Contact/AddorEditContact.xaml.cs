@@ -2,16 +2,12 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
-using OnlineAddressBookWinUI.User;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -30,7 +26,7 @@ namespace OnlineAddressBookWinUI.Contact
         protected string type = "";
         protected string oldPhoneNo = "";
         protected Contact contact;
-        protected EditContact editContact=new EditContact();
+        protected EditContact editContact = new EditContact();
 
         public GroupModel GroupModel { get; set; }
 
@@ -42,6 +38,7 @@ namespace OnlineAddressBookWinUI.Contact
             // Initialize the ViewModel and bind to DataContext
             GroupModel = new GroupModel();
             this.DataContext = GroupModel;
+            version.Text = new Version().GetAppVersion();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -49,8 +46,8 @@ namespace OnlineAddressBookWinUI.Contact
             if (e.Parameter is Send args)
             {
                 email = args.Email;
-                type=args.Type;
-                contact=args.Contact;
+                type = args.Type;
+                contact = args.Contact;
             }
             setExistingGroups();
             if (type == "edit")
@@ -61,7 +58,7 @@ namespace OnlineAddressBookWinUI.Contact
         }
 
         //groupSelection from xaml
-        private void groupSelection(object sender,SelectionChangedEventArgs e)
+        private void groupSelection(object sender, SelectionChangedEventArgs e)
         {
             foreach (var item in groupList.SelectedItems)
             {
@@ -83,45 +80,104 @@ namespace OnlineAddressBookWinUI.Contact
             ContentDialog addNewGroupDialog = new ContentDialog
             {
                 Title = "Add New Group",
-                PrimaryButtonText = "Ok",
-                CloseButtonText = "Cancel",
-                DefaultButton = ContentDialogButton.Primary
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
             };
+            StackPanel first = new StackPanel();
 
             TextBox groupNameInput = new TextBox
             {
                 PlaceholderText = "Enter the group name",
-                Margin = new Thickness(0, 10, 0, 10) // Add some margin for spacing
+                Margin = new Thickness(0, 10, 0, 10), // Add some margin for spacing
+                Background = (Brush)Application.Current.Resources["DialogTextBoxBackground"],
+                Foreground = (Brush)Application.Current.Resources["DialogTextBoxForeground"],
+                BorderThickness = (Thickness)Application.Current.Resources["DialogTextBoxThickness"],
+                BorderBrush = (SolidColorBrush)Application.Current.Resources["DialogTextBoxBorderBrush"],
             };
+
+            groupNameInput.Resources["TextControlBorderThemeThicknessPointerOver"] = (Thickness)Application.Current.Resources["DialogTextBoxThickness"];
+            groupNameInput.Resources["TextControlBorderThemeThicknessFocused"] = (Thickness)Application.Current.Resources["DialogTextBoxThickness"];
+            groupNameInput.Resources["TextControlBorderBrushFocused"] = (SolidColorBrush)Application.Current.Resources["DialogTextBoxBorderBrush"];
+            groupNameInput.Resources["TextControlBorderBrushPointerOver"] = (SolidColorBrush)Application.Current.Resources["DialogTextBoxBorderBrush"];
+            groupNameInput.Resources["TextControlForegroundPointerOver"] = (Brush)Application.Current.Resources["DialogTextBoxForeground"];
+            groupNameInput.Resources["TextControlForegroundFocused"] = (Brush)Application.Current.Resources["DialogTextBoxForeground"];
+            groupNameInput.Resources["TextControlBackgroundPointerOver"] = (Brush)Application.Current.Resources["DialogTextBoxBackground"];
+            groupNameInput.Resources["TextControlBackgroundFocused"] = (Brush)Application.Current.Resources["DialogTextBoxBackground"];
 
             TextBlock alertDialog = new TextBlock
             {
-                Text = ""
+                Text = "",
+                Foreground = (Brush)Application.Current.Resources["alertText"],
+                Margin=new Thickness(0,10,0,10)
             };
 
-            // Use a StackPanel to hold both elements
-            StackPanel dialogContent = new StackPanel();
-            dialogContent.Children.Add(groupNameInput);
-            dialogContent.Children.Add(alertDialog);
+            StackPanel second = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment= HorizontalAlignment.Center,
+                Margin=new Thickness(0,20,0,20)
+            };
+
+            Button primaryButton = new Button
+            {
+                Content = "Submit",
+                Background = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["PrimaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["PrimaryButtonThickness"],
+                Padding=new Thickness(20,5,20,5),
+                Margin=new Thickness(25,10,25,10)
+            };
+
+            primaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonBackgroundPointerOver"];
+            primaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            primaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            Button secondaryButton = new Button
+            {
+                Content = "Cancel",
+                Background = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["SecondaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["SecondaryButtonThickness"],
+                Padding = new Thickness(20, 5, 20, 5),
+                Margin = new Thickness(25, 10, 25, 10)
+            };
+
+            secondaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonBackgroundPointerOver"];
+            secondaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            secondaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            second.Children.Add(primaryButton);
+            second.Children.Add(secondaryButton);
+            first.Children.Add(groupNameInput);
+            first.Children.Add(alertDialog);
+            first.Children.Add(second);
 
             // Assign the StackPanel to the ContentDialog's Content
-            addNewGroupDialog.Content = dialogContent;
+            addNewGroupDialog.Content = first;
             addNewGroupDialog.XamlRoot = this.XamlRoot;
 
-            addNewGroupDialog.PrimaryButtonClick += (sender, args) =>
+            primaryButton.Click += (sender, args) =>
             {
                 // Validate input
                 if (string.IsNullOrWhiteSpace(groupNameInput.Text))
                 {
                     alertDialog.Text = "Group name cannot be empty.";
                     alertDialog.Visibility = Visibility.Visible;
-                    args.Cancel = true; // Prevent dialog from closing
                 }
                 else if (!checkGroup(groupNameInput.Text))
                 {
                     alertDialog.Text = "The group already exists.";
                     alertDialog.Visibility = Visibility.Visible;
-                    args.Cancel = true;
                 }
                 else
                 {
@@ -138,7 +194,13 @@ namespace OnlineAddressBookWinUI.Contact
                     id++;
                     GroupModel.Groups.Add(newGroup);
                     groupList.SelectedItems.Add(newGroup);
+                    addNewGroupDialog.Hide();
                 }
+            };
+
+            secondaryButton.Click += (sender, args) =>
+            {
+                addNewGroupDialog.Hide();
             };
 
             // Show the dialog
@@ -328,9 +390,9 @@ namespace OnlineAddressBookWinUI.Contact
         //check the group is present or not
         private bool checkGroup(string groupName)
         {
-            foreach(Group indGroup in GroupModel.Groups)
+            foreach (Group indGroup in GroupModel.Groups)
             {
-                if(string.Equals(indGroup.Name, groupName, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(indGroup.Name, groupName, StringComparison.OrdinalIgnoreCase))
                 {
                     return false;
                 }
@@ -403,7 +465,7 @@ namespace OnlineAddressBookWinUI.Contact
             //traverse the selected items in the grouplist
             foreach (var item in groupList.SelectedItems)
             {
-                if(item is Group selectedGroup)
+                if (item is Group selectedGroup)
                 {
                     groupNames.Add(selectedGroup.Name);
                 }
@@ -411,14 +473,14 @@ namespace OnlineAddressBookWinUI.Contact
 
             string res = "";
             groupNames.Sort();
-            
+
             //make the list as string
-            for(int index=0;index<groupNames.Count;index++)
+            for (int index = 0; index < groupNames.Count; index++)
             {
-                res+= groupNames[index];
+                res += groupNames[index];
                 if (index < groupNames.Count - 1)
                 {
-                    res+= ",";
+                    res += ",";
                 }
             }
             return res;
@@ -464,6 +526,8 @@ namespace OnlineAddressBookWinUI.Contact
             ContentDialog addNewGroupDialog = new ContentDialog
             {
                 Title = "Edit",
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
                 PrimaryButtonText = string.Empty, // Hide primary button
                 CloseButtonText = string.Empty   // Hide close button
             };
@@ -494,6 +558,8 @@ namespace OnlineAddressBookWinUI.Contact
             ContentDialog addNewGroupDialog = new ContentDialog
             {
                 Title = "Add",
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
                 PrimaryButtonText = string.Empty, // Hide primary button
                 CloseButtonText = string.Empty   // Hide close button
             };
@@ -506,6 +572,7 @@ namespace OnlineAddressBookWinUI.Contact
                 VerticalAlignment = VerticalAlignment.Center,
                 FontSize = 16,
             };
+
             addNewGroupDialog.Content = textBlock;
             addNewGroupDialog.XamlRoot = this.XamlRoot;
             // Show the dialog

@@ -7,12 +7,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+    Background="#6e98f5">
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <!--Overall panel-->
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Border BorderBrush="Gray" Height="Auto" Width="400" Background="#E7E5E5" CornerRadius="20">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" MaxWidth="500">
+            <Border BorderBrush="Gray" MaxWidth="400" Padding="30,10" Width="Auto" Background="White" CornerRadius="20" Margin="0,70,0,0" MinWidth="10" MaxHeight="650" MinHeight="10">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -25,45 +29,74 @@
                     </Grid.RowDefinitions>
 
                     <!-- Name Input -->
-                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="45,10">
-                        <TextBlock Text="Name" FontSize="15" Margin="5" />
-                        <TextBox x:Name="nameInput" Width="300" Margin="5" BorderThickness="0" />
+                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,10">
+                        <TextBlock Text="Name" FontSize="15" Margin="5" Foreground="Black"/>
+                        <TextBox x:Name="nameInput" MaxWidth="300" MinWidth="10" Margin="5" BorderBrush="#6e98f5" BorderThickness="1"/>
                     </StackPanel>
 
                     <!-- Phone Number Input -->
-                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="45,10">
-                        <TextBlock Text="Phone Number" FontSize="15" Margin="5" />
-                        <TextBox x:Name="phoneNoInput" Width="300" Margin="5" BorderThickness="0" />
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10">
+                        <TextBlock Text="Phone Number" FontSize="15" Margin="5" Foreground="Black"/>
+                        <TextBox x:Name="phoneNoInput" MaxWidth="300" MinWidth="10" Margin="5" BorderThickness="1" BorderBrush="#6e98f5"/>
                     </StackPanel>
 
                     <!-- Address Input -->
-                    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="45,10">
-                        <TextBlock Text="Address" FontSize="15" Margin="5" />
-                        <TextBox x:Name="addressInput" Width="300" Margin="5" Height="80" TextWrapping="Wrap" BorderThickness="0" />
+                    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
+                        <TextBlock Text="Address" FontSize="15" Margin="5" Foreground="Black"/>
+                        <TextBox x:Name="addressInput" MaxWidth="300" MinWidth="10" Margin="5" Height="80" TextWrapping="Wrap" BorderThickness="1" BorderBrush="#6e98f5"/>
                     </StackPanel>
 
                     <!-- Social Media Selection -->
-                    <StackPanel Orientation="Vertical" Grid.Row="3" Margin="45,10">
-                        <TextBlock Text="Group" FontSize="15" Margin="5" />
-                        <ListView x:Name="groupList" ItemsSource="{Binding Groups}" SelectionMode="Multiple" Width="300" Height="120" SelectionChanged="groupSelection">
+                    <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
+                        <TextBlock Text="Group" FontSize="15" Margin="5" Foreground="Black"/>
+                        
+                        <ListView x:Name="groupList" ItemsSource="{Binding Groups}" SelectionMode="Multiple" MaxWidth="300" MinWidth="10" Height="120" SelectionChanged="groupSelection">
+                        
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" />
+                                    <TextBlock Text="{Binding Name}" Foreground="Black" TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
+                            
                         </ListView>
                     </StackPanel>
 
                     <!-- Submit Button -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="0,15">
-                        <Button x:Name="submitBtn"  Margin="20,0" Background="#1B9331" Foreground="White" Width="100" Click="Submit" Content="Submit" />
-                        <Button  x:Name="cancelBtn" Content="Cancel" Margin="20,0" Foreground="Black" Width="100" Click="Cancel" />
+
+                        <Button x:Name="submitBtn"  Margin="20,0" Background="#35772C" Click="Submit" Content="Submit" Style="{StaticResource LoginButtonsStyle}" BorderBrush="#35772C">
+                            <Button.Resources>
+                                <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SubmitButtonBackgroundPointerOver" />
+                                <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SubmitButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SubmitButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SubmitButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="SubmitButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="SubmitButtonForeground" />
+                            </Button.Resources>
+                        </Button>
+
+                        <Button  x:Name="cancelBtn" Content="Cancel" Margin="20,0" Click="Cancel" Background="#a60707" Style="{StaticResource LoginButtonsStyle}" BorderBrush="#a60707">
+                            <Button.Resources>
+                                <StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="CancelButtonBackgroundPointerOver" />
+                                <StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="CancelButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="CancelButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundPressed" ResourceKey="CancelButtonForeground" />
+
+                                <StaticResource x:Key="ButtonBackgroundReleased" ResourceKey="CancelButtonBackground" />
+                                <StaticResource x:Key="ButtonForegroundReleased" ResourceKey="CancelButtonForeground" />
+                            </Button.Resources>
+                        </Button>
                     </StackPanel>
-                    
+
                     <!-- Alert Message -->
                     <TextBlock x:Name="alert" Foreground="#db0202" HorizontalAlignment="Center" Grid.Row="5" Margin="0,5,0,10" TextWrapping="Wrap" />
                 </Grid>
             </Border>
         </StackPanel>
+        <TextBlock Name="version" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20" Grid.Row="1" Foreground="White"></TextBlock>
+
     </Grid>
 </Page>

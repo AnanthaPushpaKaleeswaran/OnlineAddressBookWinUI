@@ -1,8 +1,5 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
@@ -11,12 +8,8 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.ApplicationModel.Contacts;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,6 +29,7 @@ namespace OnlineAddressBookWinUI.Contact
         public Display()
         {
             this.InitializeComponent();
+            version.Text += new Version().GetAppVersion();
         }
         public void AddNewContact(object sender, RoutedEventArgs e)
         {
@@ -52,7 +46,7 @@ namespace OnlineAddressBookWinUI.Contact
             if (e.Parameter is string message)
             {
                 // Use the string
-                email = message; 
+                email = message;
             }
             LoadContacts();
             LoadGroupsFromDB();
@@ -65,21 +59,15 @@ namespace OnlineAddressBookWinUI.Contact
             contactList.ItemsSource = Contacts;
         }
 
-        //logout function
-        public void Logout(object sender,RoutedEventArgs e)
-        {
-            Frame rootFrame = ((App)Application.Current).RootFrame;
-            Frame.Navigate(typeof(User.LoginPage));
-        }
 
         //get the contacts from db
         private ObservableCollection<Contact> LoadContactsFromDB()
         {
-            ObservableCollection<Contact> contacts = new ObservableCollection<Contact> ();
+            ObservableCollection<Contact> contacts = new ObservableCollection<Contact>();
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
             string connectionString = $"Data Source={dbPath}";
-            
-            using (SQLiteConnection connection=new SQLiteConnection(connectionString))
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
 
@@ -94,22 +82,22 @@ namespace OnlineAddressBookWinUI.Contact
                     return contacts;
                 }
                 string query = "SELECT name,phoneNo,address,contactGroup FROM contact WHERE email=@email";
-                
-                using(SQLiteCommand command=new SQLiteCommand(query, connection))
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@email", email);
-                
-                    using(SQLiteDataReader reader = command.ExecuteReader())
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        if(reader.HasRows)
+                        if (reader.HasRows)
                         {
-                            while(reader.Read())
+                            while (reader.Read())
                             {
 
                                 //add the contacts
                                 contacts.Add(new Contact
-                                { 
-                                    Name= reader["name"].ToString(),
+                                {
+                                    Name = reader["name"].ToString(),
                                     PhoneNo = reader["phoneNo"].ToString(),
                                     Address = reader["address"].ToString(),
                                     ContactGroup = reader["contactGroup"].ToString()
@@ -134,9 +122,9 @@ namespace OnlineAddressBookWinUI.Contact
         //view by group function from xaml
         public void ViewGroup(Object sender, RoutedEventArgs e)
         {
-            if(viewByGroup.SelectedItem is string selectedGroup)
+            if (viewByGroup.SelectedItem is string selectedGroup)
             {
-                if(selectedGroup=="No Group")
+                if (selectedGroup == "No Group")
                 {
                     selectedGroup = "";
                 }
@@ -148,14 +136,20 @@ namespace OnlineAddressBookWinUI.Contact
         private void LoadViewContacts(string selectedGroup)
         {
             Contacts = LoadContactsFromDB();
-            ObservableCollection<Contact> groupContacts= new ObservableCollection<Contact>();
-            
+            ObservableCollection<Contact> groupContacts = new ObservableCollection<Contact>();
+
             foreach (Contact contact in Contacts)
             {
                 string groupName = contact.ContactGroup;
                 string tempGroup = "";
-            
-                foreach(char ch in groupName)
+
+                if (selectedGroup == "" && groupName=="")
+                {
+                    groupContacts.Add(contact);
+                    continue;
+                }
+
+                foreach (char ch in groupName)
                 {
                     if (ch == ',')
                     {
@@ -172,13 +166,13 @@ namespace OnlineAddressBookWinUI.Contact
                         tempGroup += ch;
                     }
                 }
-                
+
                 if (tempGroup == selectedGroup && !string.IsNullOrWhiteSpace(tempGroup))
                 {
                     groupContacts.Add(contact);
                 }
             }
-            
+
             //if the option is show all then we want to show all the contacts
             if (selectedGroup != "Show All")
             {
@@ -198,11 +192,11 @@ namespace OnlineAddressBookWinUI.Contact
             HashSet<string> groupSet = new HashSet<string>();
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
             string connectionString = $"Data Source={dbPath}";
-            
+
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-            
+
                 if (connection.State.Equals("Close"))
                 {
                     Console.Error.WriteLine("Error in opening db");
@@ -214,11 +208,11 @@ namespace OnlineAddressBookWinUI.Contact
                     return;
                 }
                 string query = "SELECT contactGroup FROM contact WHERE email=@email";
-                
+
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@email", email);
-                
+
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -227,7 +221,7 @@ namespace OnlineAddressBookWinUI.Contact
                             {
                                 string indGroup = reader["contactGroup"].ToString();
                                 string tempGroup = "";
-                    
+
                                 foreach (char ch in indGroup)
                                 {
                                     if (ch == ',')
@@ -240,7 +234,7 @@ namespace OnlineAddressBookWinUI.Contact
                                         tempGroup += ch;
                                     }
                                 }
-                                
+
                                 if (!string.IsNullOrWhiteSpace(tempGroup))
                                 {
                                     groupSet.Add(tempGroup);
@@ -255,14 +249,14 @@ namespace OnlineAddressBookWinUI.Contact
             {
                 groups.Add(group);
             }
-            
+
             groups.Add("No Group");
             viewByGroup.ItemsSource = groups;
         }
 
-        public void EditContactClick(object sender,RoutedEventArgs args)
+        public void EditContactClick(object sender, RoutedEventArgs args)
         {
-            var button=sender as Button;
+            var button = sender as Button;
             Contact contact = button?.Tag as Contact;
             Send send = new Send();
             send.Email = email;
@@ -272,10 +266,10 @@ namespace OnlineAddressBookWinUI.Contact
             Frame.Navigate(typeof(AddorEditContact), send);
         }
 
-        public void DeleteContactClick(object sender,RoutedEventArgs args)
+        public void DeleteContactClick(object sender, RoutedEventArgs args)
         {
-            var button=sender as Button;
-            Contact contact=button?.Tag as Contact;
+            var button = sender as Button;
+            Contact contact = button?.Tag as Contact;
             DeleteModal(contact);
             contactList.ItemsSource = null;
             contactList.ItemsSource = Contacts;
@@ -285,19 +279,82 @@ namespace OnlineAddressBookWinUI.Contact
         {
             ContentDialog deleteDialog = new ContentDialog
             {
-                Title="Delete",
-                PrimaryButtonText="Yes",
-                SecondaryButtonText="No",
-                DefaultButton = ContentDialogButton.Primary,
-                Content="Are you sure you want to delete this contact?"
+                Title = "Delete contact",
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
             };
 
+            StackPanel first = new StackPanel();
+
+            TextBlock contentText = new TextBlock
+            {
+                Text = "Are you sure you want to delete this contact?",
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
+                Margin = new Thickness(0, 10, 0, 10)
+            };
+
+            StackPanel second = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                Margin = new Thickness(0, 20, 0, 20)
+            };
+
+            Button primaryButton = new Button
+            {
+                Content = "Yes",
+                Background = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["SecondaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["SecondaryButtonThickness"],
+                Padding = new Thickness(45, 5, 45, 7),
+                Margin = new Thickness(5, 10, 15, 10)
+            };
+
+            primaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonBackgroundPointerOver"];
+            primaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            Button secondaryButton = new Button
+            {
+                Content = "No",
+                Background = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["PrimaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["PrimaryButtonThickness"],
+                Padding = new Thickness(45, 5, 45, 7),
+                Margin = new Thickness(15, 10, 5, 10)
+            };
+
+            secondaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonBackgroundPointerOver"];
+            secondaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            second.Children.Add(primaryButton);
+            second.Children.Add(secondaryButton);
+            first.Children.Add(contentText);
+            first.Children.Add(second);
+            deleteDialog.Content = first;
             deleteDialog.XamlRoot = this.XamlRoot;
-            deleteDialog.PrimaryButtonClick += (sender, args) =>
+
+            primaryButton.Click += (sender, args) =>
             {
                 Contacts.Remove(contact);
                 deleteDialog.Hide();
                 DeleteContact(contact);
+            };
+
+            secondaryButton.Click += (sender, args) =>
+            {
+                deleteDialog.Hide();
             };
             deleteDialog.ShowAsync();
         }
@@ -336,11 +393,12 @@ namespace OnlineAddressBookWinUI.Contact
         private async void showDeleteDialog()
         {
             // Create a ContentDialog
-            ContentDialog addNewGroupDialog = new ContentDialog
+            ContentDialog deleteDialog = new ContentDialog
             {
                 Title = "Delete",
-                PrimaryButtonText = string.Empty, // Hide primary button
-                CloseButtonText = string.Empty   // Hide close button
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
+                
             };
 
             // Add content to the dialog
@@ -351,25 +409,26 @@ namespace OnlineAddressBookWinUI.Contact
                 VerticalAlignment = VerticalAlignment.Center,
                 FontSize = 16,
             };
-            addNewGroupDialog.Content = textBlock;
-            addNewGroupDialog.XamlRoot = this.XamlRoot;
+
+            deleteDialog.Content = textBlock;
+            deleteDialog.XamlRoot = this.XamlRoot;
             // Show the dialog
-            _ = addNewGroupDialog.ShowAsync();
+            _ = deleteDialog.ShowAsync();
 
             // Wait for 1 second
             await Task.Delay(1000);
 
             // Close the dialog
-            addNewGroupDialog.Hide();
+            deleteDialog.Hide();
         }
 
-        public void SearchContacts(object sender,RoutedEventArgs e)
+        public void SearchContacts(object sender, RoutedEventArgs e)
         {
             ObservableCollection<Contact> searchContacts = new ObservableCollection<Contact>();
-            string searchText=searchInput.Text;
-            foreach(Contact contact in Contacts)
+            string searchText = searchInput.Text;
+            foreach (Contact contact in Contacts)
             {
-                string mainString=contact.Name.ToLower();
+                string mainString = contact.Name.ToLower();
                 string sub = searchText.ToLower();
                 if (mainString.Contains(sub))
                 {
@@ -382,6 +441,93 @@ namespace OnlineAddressBookWinUI.Contact
                 return;
             }
             contactList.ItemsSource = searchContacts;
+        }
+
+        public void LogoutModal(object sender, RoutedEventArgs args)
+        {
+
+            ContentDialog logoutDialog = new ContentDialog
+            {
+                Title = "Logout",
+                Background = (Brush)Application.Current.Resources["ContentDialogBackground"],
+                Foreground= (Brush)Application.Current.Resources["ContentDialogForeground"],
+            };
+
+            StackPanel first = new StackPanel();
+
+            TextBlock contentText = new TextBlock
+            {
+                Text = "Are you sure you want to logout?",
+                Foreground = (Brush)Application.Current.Resources["ContentDialogForeground"],
+                Margin = new Thickness(0, 10, 0, 10)
+            };
+
+            StackPanel second = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                Margin = new Thickness(0, 20, 0, 20)
+            };
+
+            Button primaryButton = new Button
+            {
+                Content = "Yes",
+                Background = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["SecondaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["SecondaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["SecondaryButtonThickness"],
+                Padding = new Thickness(45, 5, 45, 7),
+                Margin = new Thickness(5, 10, 15, 10)
+            };
+
+            primaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonBackgroundPointerOver"];
+            primaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonBackground"];
+            primaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["SecondaryButtonForeground"];
+            primaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            Button secondaryButton = new Button
+            {
+                Content = "No",
+                Background = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                Foreground = (Brush)Application.Current.Resources["PrimaryButtonForeground"],
+                BorderBrush = (Brush)Application.Current.Resources["PrimaryButtonBackground"],
+                BorderThickness = (Thickness)Application.Current.Resources["PrimaryButtonThickness"],
+                Padding = new Thickness(45, 5, 45, 7),
+                Margin = new Thickness(15, 10, 5, 10)
+            };
+
+            secondaryButton.Resources["ButtonBackgroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonBackgroundPointerOver"];
+            secondaryButton.Resources["ButtonForegroundPointerOver"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundPressed"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.Resources["ButtonBackgroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonBackground"];
+            secondaryButton.Resources["ButtonForegroundReleased"] = (Brush)Application.Current.Resources["PrimaryButtonForeground"];
+            secondaryButton.CornerRadius = (CornerRadius)Application.Current.Resources["DialogCornerRadius"];
+
+            second.Children.Add(primaryButton);
+            second.Children.Add(secondaryButton);
+            first.Children.Add(contentText);
+            first.Children.Add(second);
+            logoutDialog.Content = first;
+            logoutDialog.XamlRoot = this.XamlRoot;
+
+            primaryButton.Click += (sender, args) =>
+            {
+                logoutDialog.Hide();
+                Frame rootFrame = ((App)Application.Current).RootFrame;
+                Frame.Navigate(typeof(User.LoginPage));
+            };
+
+            secondaryButton.Click += (sender, args) =>
+            {
+                logoutDialog.Hide();
+            };
+           
+            logoutDialog.ShowAsync();
+
         }
     }
 

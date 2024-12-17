@@ -1,10 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Navigation;
 using System;
-using System.Text;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -28,6 +25,7 @@ namespace OnlineAddressBookWinUI.User
         public SignupPage()
         {
             this.InitializeComponent();
+            version.Text += new Version().GetAppVersion();
         }
 
         //go back to login page
@@ -41,45 +39,50 @@ namespace OnlineAddressBookWinUI.User
         {
             email = emailInput.Text;
             password = passwordInput.Password;
-        
-            if(!ValidEmail())
+
+            if (!ValidEmail())
             {
-                alert.Text = "Please enter a vaid email";
+                passwordAlert.Text = "";
+                alert.Text = "";
+                emailAlert.Text = "Please enter a vaid email";
                 return;
             }
-           
-            if(!ValidPass())
+
+            if (!ValidPass())
             {
-                alert.Text = "Please enter the password between 8 and below 50 characters.\nThe password must contain a upper case letter, a lower case letter, a number and a symbol";
+                emailAlert.Text = "";
+                alert.Text = "";
+                passwordAlert.Text = "Please enter the password between 8 and 50 characters. The password must contain a upper case letter, a lower case letter, a number and a symbol";
                 return;
             }
-            alert.Text = "";
-            
+
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "onlineAddressBook.db");
             string ConnectionString = $"Data Source={dbPath}";
             SQLiteConnection MyConnection = new SQLiteConnection(ConnectionString);
             MyConnection.Open();
-            
+
             if (MyConnection.State.Equals("close"))
             {
                 Console.Error.WriteLine("Error in opening db");
                 return;
             }
-            
+
             if (!tableExist(MyConnection, "user"))
             {
                 createUserTable(MyConnection);
             }
-            
+
             encryptPassword();
             string query = "SELECT COUNT(1) FROM user WHERE email=@email";
             SQLiteCommand command = new SQLiteCommand(query, MyConnection);
-            command.Parameters.AddWithValue("@email",email);
+            command.Parameters.AddWithValue("@email", email);
             int userCount = Convert.ToInt32(command.ExecuteScalar());
-            
+
             if (userCount > 0)
             {
-                alert.Text = "User already exists.Login to continue";
+                emailAlert.Text = "";
+                passwordAlert.Text = "";
+                alert.Text = "User already exists. Login to continue";
                 return;
             }
 
@@ -87,7 +90,7 @@ namespace OnlineAddressBookWinUI.User
             {
                 return;
             }
-            
+
             alert.Text = "User added successfully";
             Frame rootFrame = ((App)Application.Current).RootFrame;
             Frame.Navigate(typeof(Contact.Display), email);
@@ -116,7 +119,7 @@ namespace OnlineAddressBookWinUI.User
             var result = command.ExecuteScalar();
             return Convert.ToInt32(result) > 0;
         }
-        
+
         protected void createUserTable(SQLiteConnection connection)
         {
             string query = $@"CREATE TABLE IF NOT EXISTS user (email VARCHAR(50), password VARCHAR(30))";
@@ -124,7 +127,7 @@ namespace OnlineAddressBookWinUI.User
             command.ExecuteNonQuery();
             Console.WriteLine("Table created successfully");
         }
-        
+
         protected void encryptPassword()
         {
             SetKeys();
@@ -135,7 +138,7 @@ namespace OnlineAddressBookWinUI.User
                 encoded.Add(Encrypt((int)letter));
             }
             string encPass = "";
-            
+
             foreach (int letter in encoded)
             {
                 encPass += letter.ToString();
@@ -177,7 +180,7 @@ namespace OnlineAddressBookWinUI.User
         {
             int e = publicKey;
             int encrypted_text = 1;
-            
+
             while (e > 0)
             {
                 encrypted_text *= message;
@@ -202,7 +205,7 @@ namespace OnlineAddressBookWinUI.User
             {
                 string query = "INSERT INTO user VALUES (@Email, @Password)";
                 SQLiteCommand command = new SQLiteCommand(query, connection);
-                command.Parameters.AddWithValue("@Email",email);
+                command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
                 int rowsAffected = command.ExecuteNonQuery();
                 return rowsAffected > 0;
