@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineAddressBookWinUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+834281e0d8057accf17c7674681f33d20fbdc583")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1ed6e38ab72eeea9645a4d6af733aeb5a179620")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineAddressBookWinUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineAddressBookWinUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

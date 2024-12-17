@@ -13,6 +13,7 @@
 		<SelfContained>true</SelfContained>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Content Remove="Assets\contact.png" />
 	  <Content Remove="Assets\delete.png" />
 	  <Content Remove="Assets\editing.png" />
 	</ItemGroup>
