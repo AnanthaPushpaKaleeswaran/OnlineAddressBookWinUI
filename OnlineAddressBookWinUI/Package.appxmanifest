@@ -10,7 +10,7 @@
   <Identity
     Name="0fed5a0f-8303-4447-8d8c-564b50d53e88"
     Publisher="CN=yogar"
-    Version="1.0.8.0" />
+    Version="1.0.9.0" />
 
   <mp:PhoneIdentity PhoneProductId="0fed5a0f-8303-4447-8d8c-564b50d53e88" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
